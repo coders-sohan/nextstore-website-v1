@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .ns_container {
+    @apply container mx-auto px-5 md:px-10 py-10;
+  }
+}
