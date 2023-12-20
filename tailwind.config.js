@@ -12,7 +12,9 @@ export default withMT({
       },
       // custom font
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        openSans: ["Open Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
       },
     },
   },
