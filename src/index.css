@@ -4,6 +4,6 @@
 
 @layer components {
   .ns_container {
-    @apply container mx-auto px-5 md:px-10 py-10;
+    @apply container mx-auto px-5 md:px-0;
   }
 }

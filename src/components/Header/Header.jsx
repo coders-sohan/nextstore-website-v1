@@ -1,7 +1,15 @@
+import TopHeaderSec from "./TopHeaderSec/TopHeaderSec";
+
 const Header = () => {
   return (
     <>
-      <div>Header</div>
+      <div>
+        <div className="ns_container py-2">
+          <div>
+            <TopHeaderSec />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
