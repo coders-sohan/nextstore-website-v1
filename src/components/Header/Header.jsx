@@ -4,10 +4,8 @@ const Header = () => {
   return (
     <>
       <div>
-        <div className="ns_container py-2">
-          <div>
-            <TopHeaderSec />
-          </div>
+        <div className="bg-gray-100">
+          <TopHeaderSec />
         </div>
       </div>
     </>
