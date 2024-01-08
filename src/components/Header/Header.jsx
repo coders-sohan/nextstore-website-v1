@@ -1,3 +1,4 @@
+import MiddelHeaderSec from "./MiddelHeaderSec/MiddelHeaderSec";
 import TopHeaderSec from "./TopHeaderSec/TopHeaderSec";
 
 const Header = () => {
@@ -6,6 +7,9 @@ const Header = () => {
       <div>
         <div className="bg-gray-100">
           <TopHeaderSec />
+        </div>
+        <div className="">
+          <MiddelHeaderSec />
         </div>
       </div>
     </>
