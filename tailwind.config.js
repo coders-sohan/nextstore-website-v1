@@ -20,13 +20,14 @@ export default withMT({
         // custom gray colors
         white: "#ffffff",
         gray: {
-          light: "#f8f8ff",
+          DEAFULT: "#5d6167",
           medium: "#dddbf1",
-          dark: "#5d6167",
+          light: "#f8f8ff",
         },
         // custom black colors
-        black: {
-          DEAFULT: "#030811",
+        black: "#030811",
+        dark: {
+          DEFAULT: "#070f22",
           special: "#102e4a",
           muted: "#353941",
         },
