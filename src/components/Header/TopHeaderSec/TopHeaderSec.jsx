@@ -13,7 +13,7 @@ const TopHeaderSec = () => {
 
   return (
     <div className="ns_container py-1">
-      <div className="flex justify-between items-center">
+      <div className="md:flex justify-between items-center hidden">
         {topHeaderSecData.map((section) => (
           <div key={section.id} className="flex gap-5 items-center">
             {section.dataList.map((item) => (
