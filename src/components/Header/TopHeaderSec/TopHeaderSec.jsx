@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { topHeaderSecData } from "../../../assets/data/navbarData";
 import { Link } from "react-router-dom";
 import CustomSelect from "./CustomSelect";
+import {
+  accountRelatedData,
+  informationRelatedData,
+} from "../../../assets/data/navbarData";
 
 const TopHeaderSec = () => {
   const [selected, setSelected] = useState({});
@@ -13,26 +16,30 @@ const TopHeaderSec = () => {
 
   return (
     <div className="ns_container py-1">
-      <div className="md:flex justify-between items-center hidden">
-        {topHeaderSecData.map((section) => (
-          <div key={section.id} className="flex gap-5 items-center">
-            {section.dataList.map((item) => (
-              <div key={item.id} className="-mt-0.5">
-                {item.data ? (
-                  <CustomSelect
-                    label={item.name}
-                    options={item.data.map((option) => option)}
-                    onChange={(value) => handleChange(item.id, value)}
-                  />
-                ) : (
-                  <Link to={item.href} className="text-xs -mt-0.5">
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </div>
-        ))}
+      <div className="flex justify-between items-center">
+        <div className="ns_navbar_flex">
+          {accountRelatedData.map((item) => (
+            <div key={item.id}>
+              <Link to={item.href} className="text-xs">
+                {item.name}
+              </Link>
+            </div>
+          ))}
+        </div>
+        <div className="ns_navbar_flex">
+          <Link to={"/order-tracking"} className="text-xs">
+            Order Tracking
+          </Link>
+          {informationRelatedData.map((item) => (
+            <div key={item.id}>
+              <CustomSelect
+                label={item.name}
+                options={item.data.map((option) => option)}
+                onChange={(value) => handleChange(item.id, value)}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

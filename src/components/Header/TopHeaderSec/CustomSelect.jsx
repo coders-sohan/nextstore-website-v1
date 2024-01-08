@@ -23,14 +23,14 @@ const CustomSelect = ({ options }) => {
 
   return (
     <div
-      className="relative inline-block text-left"
+      className="relative inline-block text-left -mt-0.5"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <div>
         <button
           type="button"
-          className="inline-flex justify-center items-center w-full px-2 py-0.5 text-xs"
+          className="inline-flex justify-center items-center w-full px-2 text-xs"
           id="options-menu"
           aria-haspopup="true"
           aria-expanded="true"
