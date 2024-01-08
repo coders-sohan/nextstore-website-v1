@@ -16,8 +16,8 @@ const TopHeaderSec = () => {
 
   return (
     <div className="ns_container py-1">
-      <div className="flex justify-between items-center">
-        <div className="ns_navbar_flex">
+      <div className="flex md:justify-between justify-center items-center">
+        <div className="md:flex items-center gap-5 -mt-0.5 hidden">
           {accountRelatedData.map((item) => (
             <div key={item.id}>
               <Link to={item.href} className="text-xs">
@@ -26,7 +26,7 @@ const TopHeaderSec = () => {
             </div>
           ))}
         </div>
-        <div className="ns_navbar_flex">
+        <div className="flex items-center gap-5 -mt-0.5">
           <Link to={"/order-tracking"} className="text-xs">
             Order Tracking
           </Link>
