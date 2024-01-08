@@ -6,8 +6,4 @@
   .ns_container {
     @apply container mx-auto px-5 md:px-0;
   }
-
-  .ns_navbar_flex {
-    @apply flex items-center gap-5 -mt-0.5;
-  }
 }
