@@ -8,7 +8,28 @@ export default withMT({
     extend: {
       // custom colors
       colors: {
-        primary: "#2caeba",
+        // custom main colors
+        primary: "#3185fc",
+        secondary: "#eb3b5a",
+        tertiary: "#f48c06",
+        // custom extra colors
+        success: "#06d6a0",
+        error: "#d00000",
+        warning: "#ffd166",
+        info: "#4cc9f0",
+        // custom gray colors
+        white: "#ffffff",
+        gray: {
+          light: "#f8f8ff",
+          medium: "#dddbf1",
+          dark: "#5d6167",
+        },
+        // custom black colors
+        black: {
+          DEAFULT: "#030811",
+          special: "#102e4a",
+          muted: "#353941",
+        },
       },
       // custom font
       fontFamily: {
