@@ -70,29 +70,6 @@ export const informationRelatedData = [
   },
 ];
 
-export const primaryMenuData = [
-  {
-    id: 1,
-    name: "Home",
-    href: "/",
-  },
-  {
-    id: 2,
-    name: "Our Store",
-    href: "/shop",
-  },
-  {
-    id: 3,
-    name: "Blogs",
-    href: "/blogs",
-  },
-  {
-    id: 4,
-    name: "Contact",
-    href: "/contact",
-  },
-];
-
 export const iconMenuData = [
   {
     id: 1,
@@ -122,5 +99,28 @@ export const iconMenuData = [
         href: "/register",
       },
     ],
+  },
+];
+
+export const primaryMenuData = [
+  {
+    id: 1,
+    name: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    name: "Our Store",
+    href: "/shop",
+  },
+  {
+    id: 3,
+    name: "Blogs",
+    href: "/blogs",
+  },
+  {
+    id: 4,
+    name: "Contact",
+    href: "/contact",
   },
 ];

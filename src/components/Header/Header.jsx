@@ -6,13 +6,13 @@ const Header = () => {
   return (
     <>
       <div>
-        <div className="bg-gray-100">
+        <div className="bg-gray">
           <TopHeaderSec />
         </div>
-        <div className="bg-dark-special text-white py-5">
+        <div className="bg-dark-special text-white py-5 border-b border-gray-dark">
           <MiddelHeaderSec />
         </div>
-        <div>
+        <div className="bg-dark-special text-white py-3">
           <BottomHeaderSec />
         </div>
       </div>
