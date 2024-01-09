@@ -26,7 +26,7 @@ const MiddelHeaderSec = () => {
           </Link>
         </div>
         {/* search bar */}
-        <div className="w-2/6">
+        <div className="w-2/6 md:block hidden">
           <div className="flex items-center bg-primary rounded">
             <input
               type="text"
@@ -63,14 +63,13 @@ const MiddelHeaderSec = () => {
                     {item.data.map((subItem) => (
                       <MenuItem
                         key={subItem.id}
-                        color="lightBlue"
-                        ripple="light"
                         onClick={() => navigate(subItem.href)}
                       >
-                        <ItemContent
-                          name={subItem.name}
-                          className={"text-dark"}
-                        />
+                        <span
+                          className={`text-dark text-xs font-bold normal-case`}
+                        >
+                          {subItem.name}
+                        </span>
                       </MenuItem>
                     ))}
                   </MenuList>
@@ -84,6 +83,7 @@ const MiddelHeaderSec = () => {
                 icon={AiOutlineShoppingCart}
                 name={`Cart <br> $${ammount}`}
                 className={"text-warning"}
+                cartCount={0}
               />
             </Link>
           </div>
