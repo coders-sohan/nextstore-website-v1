@@ -18,18 +18,18 @@ const MiddelHeaderSec = () => {
           <div className="flex items-center bg-primary rounded">
             <input
               type="text"
-              className="border border-gray-300 px-3 py-1 focus:outline-none text-dark-muted w-full text-sm rounded-s"
+              className="px-3 py-2 focus:outline-none focus:ring-2 focus:ring-tertiary text-dark-muted w-full text-sm rounded-s"
               placeholder="Search for products..."
               aria-level={"Search for products..."}
               onChange={(e) => console.log(e.target.value)}
             />
-            <span className="px-3 py-1">
+            <button className="px-3 py-1">
               <FiSearch className="text-white text-xl" />
-            </span>
+            </button>
           </div>
         </div>
         {/* primary menu */}
-        <div className="flex items-center gap-5 -mt-0.5">
+        <div className="w-2/6 flex items-center justify-end gap-5 -mt-0.5">
           {primaryMenuData.map((item) => (
             <div key={item.id}>
               <Link to={item.href}>{item.name}</Link>
