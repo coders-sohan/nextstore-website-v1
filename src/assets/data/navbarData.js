@@ -184,11 +184,6 @@ export const categoriesMenuData = [
     ],
   },
   {
-    id: 2,
-    name: "Furniture",
-    href: "/furniture",
-  },
-  {
     id: 3,
     name: "Clothing",
     href: "/clothing",
@@ -209,34 +204,9 @@ export const categoriesMenuData = [
     href: "/accessories",
   },
   {
-    id: 7,
-    name: "Grocery",
-    href: "/grocery",
-  },
-  {
-    id: 8,
-    name: "Toys",
-    href: "/toys",
-  },
-  {
     id: 9,
     name: "Sports",
     href: "/sports",
-  },
-  {
-    id: 10,
-    name: "Stationary",
-    href: "/stationary",
-  },
-  {
-    id: 11,
-    name: "Books",
-    href: "/books",
-  },
-  {
-    id: 12,
-    name: "Gifts",
-    href: "/gifts",
   },
   {
     id: 13,

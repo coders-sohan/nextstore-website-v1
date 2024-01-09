@@ -11,7 +11,6 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 const CategoryItem = forwardRef(({ item }, ref) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(false);
-  console.log(item);
 
   return (
     <div ref={ref}>
@@ -35,44 +34,42 @@ const CategoryItem = forwardRef(({ item }, ref) => {
             </MenuItem>
           </MenuHandler>
           <MenuList>
-            {item.data.map((subItem) => {
-              return (
-                <>
-                  {subItem.subData ? (
-                    <>
-                      <Menu
-                        placement="right-start"
-                        open={openSubMenu}
-                        handler={setOpenSubMenu}
-                        allowHover
-                        offset={15}
-                      >
-                        <MenuHandler className="flex items-center justify-between">
-                          <MenuItem>
-                            {subItem.name}
-                            <ChevronRightIcon
-                              strokeWidth={2.5}
-                              className={`h-3.5 w-3.5 transition-transform ${
-                                openSubMenu ? "rotate-180" : ""
-                              }`}
-                            />
+            {item.data.map((subItem) => (
+              <>
+                {subItem.subData ? (
+                  <>
+                    <Menu
+                      placement="right-start"
+                      open={openSubMenu}
+                      handler={setOpenSubMenu}
+                      allowHover
+                      offset={15}
+                    >
+                      <MenuHandler className="flex items-center justify-between">
+                        <MenuItem>
+                          {subItem.name}
+                          <ChevronRightIcon
+                            strokeWidth={2.5}
+                            className={`h-3.5 w-3.5 transition-transform ${
+                              openSubMenu ? "rotate-180" : ""
+                            }`}
+                          />
+                        </MenuItem>
+                      </MenuHandler>
+                      <MenuList>
+                        {subItem.subData.map((subSubItem) => (
+                          <MenuItem key={subSubItem.id}>
+                            {subSubItem.name}
                           </MenuItem>
-                        </MenuHandler>
-                        <MenuList>
-                          {subItem.subData.map((subSubItem) => (
-                            <MenuItem key={subSubItem.id}>
-                              {subSubItem.name}
-                            </MenuItem>
-                          ))}
-                        </MenuList>
-                      </Menu>
-                    </>
-                  ) : (
-                    <MenuItem key={subItem.id}>{subItem.name}</MenuItem>
-                  )}
-                </>
-              );
-            })}
+                        ))}
+                      </MenuList>
+                    </Menu>
+                  </>
+                ) : (
+                  <MenuItem key={subItem.id}>{subItem.name}</MenuItem>
+                )}
+              </>
+            ))}
           </MenuList>
         </Menu>
       )}
