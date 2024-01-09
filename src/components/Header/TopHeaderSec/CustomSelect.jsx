@@ -53,7 +53,7 @@ const CustomSelect = ({ options }) => {
       </div>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-1 w-20 rounded-md shadow-lg bg-white">
+        <div className="origin-top-right absolute right-0 mt-1 w-20 rounded-md shadow-lg bg-white z-50">
           <div
             className="py-1"
             role="menu"
@@ -64,7 +64,7 @@ const CustomSelect = ({ options }) => {
               <a
                 key={index}
                 href=""
-                className="block px-4 py-2 text-xs"
+                className="block px-4 py-2 text-xs text-dark"
                 role="menuitem"
                 onClick={() => handleItemClick(option)}
               >
