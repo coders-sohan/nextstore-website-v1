@@ -65,3 +65,26 @@ export const informationRelatedData = [
     ],
   },
 ];
+
+export const primaryMenuData = [
+  {
+    id: 1,
+    name: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    name: "Our Store",
+    href: "/shop",
+  },
+  {
+    id: 3,
+    name: "Blogs",
+    href: "/blogs",
+  },
+  {
+    id: 4,
+    name: "Contact",
+    href: "/contact",
+  },
+];

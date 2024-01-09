@@ -8,7 +8,7 @@ const Header = () => {
         <div className="bg-gray-100">
           <TopHeaderSec />
         </div>
-        <div className="">
+        <div className="bg-dark-special text-white py-3">
           <MiddelHeaderSec />
         </div>
       </div>
