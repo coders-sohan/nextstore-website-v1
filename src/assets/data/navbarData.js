@@ -133,7 +133,7 @@ export const categoriesMenuData = [
       {
         id: "laptop",
         name: "Laptop",
-        data: [
+        subData: [
           {
             id: "hp",
             name: "HP",
