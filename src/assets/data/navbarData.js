@@ -1,5 +1,6 @@
-import { FaSyncAlt } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa6";
+import { AiOutlineSync } from "react-icons/ai";
+import { FaRegHeart } from "react-icons/fa6";
+import { FaRegUser } from "react-icons/fa";
 
 export const accountRelatedData = [
   {
@@ -96,19 +97,19 @@ export const iconMenuData = [
   {
     id: 1,
     name: "Compare <br> Products",
-    icon: FaSyncAlt,
+    icon: AiOutlineSync,
     href: "/compare-products",
   },
   {
     id: 2,
     name: "Favorite <br> Wishlist",
-    icon: FaHeart,
+    icon: FaRegHeart,
     href: "/wishlist",
   },
   {
     id: 3,
     name: "Login <br> My Account",
-    icon: FaHeart,
+    icon: FaRegUser,
     data: [
       {
         id: "l1",

@@ -1,5 +1,6 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import { primaryMenuData } from "../../../assets/data/navbarData";
+import { iconMenuData } from "../../../assets/data/navbarData";
 import { FiSearch } from "react-icons/fi";
 
 const MiddelHeaderSec = () => {
@@ -29,10 +30,27 @@ const MiddelHeaderSec = () => {
           </div>
         </div>
         {/* primary menu */}
-        <div className="w-2/6 flex items-center justify-end gap-5 -mt-0.5">
-          {primaryMenuData.map((item) => (
+        <div className="w-2/6 flex items-center justify-end gap-6 -mt-0.5">
+          {iconMenuData.map((item) => (
             <div key={item.id}>
-              <Link to={item.href}>{item.name}</Link>
+              <Link
+                to={item.href}
+                className="text-dark-muted flex items-center gap-3"
+              >
+                <span>
+                  {item.icon &&
+                    React.createElement(item.icon, {
+                      className: "text-white h-7 w-7",
+                      strokeWidth: 1,
+                    })}
+                </span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: item.name,
+                  }}
+                  className="text-white text-xs font-semibold"
+                ></span>
+              </Link>
             </div>
           ))}
         </div>
