@@ -1,3 +1,6 @@
+import { FaSyncAlt } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa6";
+
 export const accountRelatedData = [
   {
     id: 1,
@@ -86,5 +89,37 @@ export const primaryMenuData = [
     id: 4,
     name: "Contact",
     href: "/contact",
+  },
+];
+
+export const iconMenuData = [
+  {
+    id: 1,
+    name: "Compare <br> Products",
+    icon: FaSyncAlt,
+    href: "/compare-products",
+  },
+  {
+    id: 2,
+    name: "Favorite <br> Wishlist",
+    icon: FaHeart,
+    href: "/wishlist",
+  },
+  {
+    id: 3,
+    name: "Login <br> My Account",
+    icon: FaHeart,
+    data: [
+      {
+        id: "l1",
+        name: "Login",
+        href: "/login",
+      },
+      {
+        id: "r2",
+        name: "Register",
+        href: "/register",
+      },
+    ],
   },
 ];
