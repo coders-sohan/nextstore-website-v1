@@ -1,5 +1,7 @@
+import { primaryMenuData } from "../../../assets/data/navbarData";
 import { IoIosArrowDown } from "react-icons/io";
 import menuSvg from "../../../assets/images/menu.svg";
+import { Link } from "react-router-dom";
 
 const BottomHeaderSec = () => {
   return (
@@ -18,7 +20,13 @@ const BottomHeaderSec = () => {
             <IoIosArrowDown />
           </div>
         </div>
-        <div>Header Sec</div>
+        <div className="flex items-center gap-12">
+          {primaryMenuData.map((item) => (
+            <div key={item.id}>
+              <Link to={item.href}>{item.name}</Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Header = () => {
         <div className="bg-dark-special text-white py-5 border-b border-gray-dark">
           <MiddelHeaderSec />
         </div>
-        <div className="bg-dark-special text-white py-3">
+        <div className="bg-dark-special text-white py-3 md:block hidden">
           <BottomHeaderSec />
         </div>
       </div>
