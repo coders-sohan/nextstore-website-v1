@@ -124,3 +124,123 @@ export const primaryMenuData = [
     href: "/contact",
   },
 ];
+
+export const categoriesMenuData = [
+  {
+    id: 1,
+    name: "Electronics",
+    data: [
+      {
+        id: "laptop",
+        name: "Laptop",
+        data: [
+          {
+            id: "hp",
+            name: "HP",
+            href: "/hp",
+          },
+          {
+            id: "lenovo",
+            name: "Lenovo",
+            href: "/lenovo",
+          },
+          {
+            id: "asus",
+            name: "Asus",
+            href: "/asus",
+          },
+          {
+            id: "acer",
+            name: "Acer",
+            href: "/acer",
+          },
+          {
+            id: "macbook",
+            name: "Apple",
+            href: "/apple",
+          },
+        ],
+      },
+      {
+        id: "mobile",
+        name: "Mobile",
+        href: "/mobile",
+      },
+      {
+        id: "camera",
+        name: "Camera",
+        href: "/camera",
+      },
+      {
+        id: "tv",
+        name: "TV",
+        href: "/tv",
+      },
+      {
+        id: "others",
+        name: "Others",
+        href: "/others",
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: "Furniture",
+    href: "/furniture",
+  },
+  {
+    id: 3,
+    name: "Clothing",
+    href: "/clothing",
+  },
+  {
+    id: 4,
+    name: "Footwear",
+    href: "/footwear",
+  },
+  {
+    id: 5,
+    name: "Jewellery",
+    href: "/jewellery",
+  },
+  {
+    id: 6,
+    name: "Accessories",
+    href: "/accessories",
+  },
+  {
+    id: 7,
+    name: "Grocery",
+    href: "/grocery",
+  },
+  {
+    id: 8,
+    name: "Toys",
+    href: "/toys",
+  },
+  {
+    id: 9,
+    name: "Sports",
+    href: "/sports",
+  },
+  {
+    id: 10,
+    name: "Stationary",
+    href: "/stationary",
+  },
+  {
+    id: 11,
+    name: "Books",
+    href: "/books",
+  },
+  {
+    id: 12,
+    name: "Gifts",
+    href: "/gifts",
+  },
+  {
+    id: 13,
+    name: "Others",
+    href: "/others",
+  },
+];
