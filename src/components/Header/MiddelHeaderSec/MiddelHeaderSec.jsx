@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Button,
   Menu,
@@ -7,10 +7,14 @@ import {
   MenuList,
 } from "@material-tailwind/react";
 import { FiSearch } from "react-icons/fi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import ItemContent from "../../Shared/ItemContent/ItemContent";
 import { iconMenuData } from "../../../assets/data/navbarData";
 
 const MiddelHeaderSec = () => {
+  const navigate = useNavigate();
+  let ammount = "0.00";
+
   return (
     <div className="ns_container">
       <div className="flex justify-between items-center">
@@ -41,10 +45,7 @@ const MiddelHeaderSec = () => {
           {iconMenuData.map((item) => (
             <div key={item.id}>
               {item.href && (
-                <Link
-                  to={item.href}
-                  className="text-dark-muted flex items-center gap-3"
-                >
+                <Link to={item.href} className="flex items-center gap-3">
                   <ItemContent icon={item.icon} name={item.name} />
                 </Link>
               )}
@@ -53,18 +54,39 @@ const MiddelHeaderSec = () => {
                   <MenuHandler>
                     <Button
                       variant="text"
-                      className="flex items-center gap-3 text-left p-0 hover:bg-transparent"
+                      className="flex items-center gap-3 text-left p-0 hover:bg-transparent font-semibold"
                     >
                       <ItemContent icon={item.icon} name={item.name} />
                     </Button>
                   </MenuHandler>
                   <MenuList>
-                    <MenuItem>Menu Item 1</MenuItem>
+                    {item.data.map((subItem) => (
+                      <MenuItem
+                        key={subItem.id}
+                        color="lightBlue"
+                        ripple="light"
+                        onClick={() => navigate(subItem.href)}
+                      >
+                        <ItemContent
+                          name={subItem.name}
+                          className={"text-dark"}
+                        />
+                      </MenuItem>
+                    ))}
                   </MenuList>
                 </Menu>
               )}
             </div>
           ))}
+          <div>
+            <Link to={"/cart"} className="flex items-center gap-3">
+              <ItemContent
+                icon={AiOutlineShoppingCart}
+                name={`Cart <br> $${ammount}`}
+                className={"text-warning"}
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

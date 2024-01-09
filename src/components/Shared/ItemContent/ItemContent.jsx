@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ItemContent = ({ icon, name }) => (
+const ItemContent = ({ icon, name, className }) => (
   <>
     <span>
       {icon &&
         React.createElement(icon, {
-          className: "text-white h-7 w-7",
+          className: `${className ? className : "text-white"} h-7 w-7`,
           strokeWidth: 1,
         })}
     </span>
     <span
       dangerouslySetInnerHTML={{ __html: name }}
-      className="text-white text-xs font-semibold normal-case"
+      className={`${
+        className ? className : "text-white"
+      } text-xs font-bold normal-case`}
     ></span>
   </>
 );
@@ -20,6 +22,7 @@ const ItemContent = ({ icon, name }) => (
 ItemContent.propTypes = {
   icon: PropTypes.elementType,
   name: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default ItemContent;
