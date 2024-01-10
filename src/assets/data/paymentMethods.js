@@ -32,7 +32,7 @@ export const paymentMethods = [
   {
     id: 7,
     name: "Google Pay",
-    url: "https://www.pay.google.com",
+    url: "https://pay.google.com",
     icon: "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1704883865/payment_methods/GooglePay_eouia2.png",
   },
   {
