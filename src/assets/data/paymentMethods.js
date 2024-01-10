@@ -1,10 +1,10 @@
-import visaCard from "../images/Payment_Methods/Visa.png";
-import masterCard from "../images/Payment_Methods/MasterCard.png";
-import americanExpress from "../images/Payment_Methods/Amex.png";
-import paypal from "../images/Payment_Methods/PayPal.png";
-import shopPay from "../images/Payment_Methods/ShopPay.png";
-import applePay from "../images/Payment_Methods/ApplePay.png";
-import googlePay from "../images/Payment_Methods/GooglePay.png";
+import visaCard from "../images/payment_methods/Visa.png";
+import masterCard from "../images/payment_methods/MasterCard.png";
+import americanExpress from "../images/payment_methods/Amex.png";
+import paypal from "../images/payment_methods/PayPal.png";
+import shopPay from "../images/payment_methods/ShopPay.png";
+import applePay from "../images/payment_methods/ApplePay.png";
+import googlePay from "../images/payment_methods/GooglePay.png";
 
 export const paymentMethods = [
   {
