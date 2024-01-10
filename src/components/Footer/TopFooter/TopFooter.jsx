@@ -30,6 +30,7 @@ const TopFooter = () => {
                 label="Email Address"
                 value={email}
                 onChange={onChange}
+                className=""
               />
               <Button
                 size="sm"
