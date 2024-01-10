@@ -34,7 +34,7 @@ const BottomFooter = () => {
                     <img
                       src={item.icon}
                       alt={item.name}
-                      className="h-7 w-full"
+                      className="h-7 w-auto"
                     />
                   </a>
                 </div>
