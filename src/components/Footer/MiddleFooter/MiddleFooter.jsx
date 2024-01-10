@@ -31,18 +31,17 @@ const MiddleFooter = () => {
               </div>
               <div className="flex gap-3 text-sm">
                 {socialData.map((item) => (
-                  <>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="ns_social_icon"
-                    >
-                      {React.createElement(item.icon, {
-                        className: "w-4 h-4",
-                      })}
-                    </a>
-                  </>
+                  <a
+                    key={item.id}
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ns_social_icon"
+                  >
+                    {React.createElement(item.icon, {
+                      className: "w-4 h-4",
+                    })}
+                  </a>
                 ))}
               </div>
             </div>

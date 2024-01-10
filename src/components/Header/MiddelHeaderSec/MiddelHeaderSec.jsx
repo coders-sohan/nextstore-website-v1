@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Button,
+  Drawer,
   Menu,
   MenuHandler,
   MenuItem,
@@ -9,10 +11,17 @@ import {
 import { FiSearch } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import ItemContent from "../../Shared/ItemContent/ItemContent";
+import CartDrawer from "../../Shared/CartDrawer/CartDrawer";
 import { iconMenuData } from "../../../assets/data/navbarData";
 
 const MiddelHeaderSec = () => {
+  const [openRight, setOpenRight] = useState(false);
+
   const navigate = useNavigate();
+
+  const openDrawerRight = () => setOpenRight(true);
+  const closeDrawerRight = () => setOpenRight(false);
+
   let ammount = "0.00";
 
   return (
@@ -78,14 +87,25 @@ const MiddelHeaderSec = () => {
             </div>
           ))}
           <div>
-            <Link to={"/cart"} className="flex items-center gap-3">
+            <div
+              className="flex items-center gap-3 cursor-pointer"
+              onClick={openDrawerRight}
+            >
               <ItemContent
                 icon={AiOutlineShoppingCart}
                 name={`Cart <br> $${ammount}`}
                 className={"text-warning"}
                 cartCount={0}
               />
-            </Link>
+            </div>
+            <Drawer
+              placement="right"
+              size={380}
+              open={openRight}
+              onClose={closeDrawerRight}
+            >
+              <CartDrawer closeDrawerRight={closeDrawerRight} />
+            </Drawer>
           </div>
         </div>
       </div>
