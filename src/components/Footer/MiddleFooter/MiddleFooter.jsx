@@ -1,5 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import {
+  accountData,
+  informationData,
+  quickLinksData,
+} from "../../../assets/data/footerData";
 import { socialData } from "../../../assets/data/socialData";
+import app_icon_01 from "../../../assets/images/app-icon-01.png";
+import app_icon_02 from "../../../assets/images/app-icon-02.png";
 
 const MiddleFooter = () => {
   return (
@@ -39,10 +47,71 @@ const MiddleFooter = () => {
               </div>
             </div>
           </div>
-          <div>Information</div>
-          <div>Account</div>
-          <div>Quick Links</div>
-          <div className="col-span-2">Our Apps</div>
+          <div>
+            <h3 className="font-bold text-lg mb-6">Information</h3>
+            <div className="flex flex-col gap-5">
+              {informationData.map((item) => (
+                <Link
+                  key={item.id}
+                  path={item.href}
+                  className="text-sm font-medium hover:text-tertiary transition-all ease-linear duration-200"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg mb-6">Account</h3>
+            <div className="flex flex-col gap-5">
+              {accountData.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.href}
+                  className="text-sm font-medium hover:text-tertiary transition-all ease-linear duration-200"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg mb-6">Quick Links</h3>
+            <div className="flex flex-col gap-5">
+              {quickLinksData.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.href}
+                  className="text-sm font-medium hover:text-tertiary transition-all ease-linear duration-200"
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className="col-span-2">
+            <h3 className="font-bold text-lg mb-6">Our Apps</h3>
+            <p className="text-sm font-normal leading-relaxed">
+              Download our App and get extra <br /> 15% Discount on your first
+              Order..!
+            </p>
+            <div className="flex gap-2 mt-5">
+              <a href="/">
+                <img
+                  src={app_icon_01}
+                  alt="app_icon_01"
+                  className="h-10 w-auto"
+                />
+              </a>
+              <a href="/">
+                <img
+                  src={app_icon_02}
+                  alt="app_icon_02"
+                  className="h-10 w-auto"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
