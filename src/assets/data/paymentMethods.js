@@ -1,5 +1,5 @@
 import visaCard from "../images/payment_methods/Visa.png";
-import masterCard from "../images/payment_methods/MasterCard.png";
+import masterCard from "../images/payment_methods/Mastercard.png";
 import americanExpress from "../images/payment_methods/Amex.png";
 import paypal from "../images/payment_methods/PayPal.png";
 import shopPay from "../images/payment_methods/ShopPay.png";
