@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
-
 const Home = () => {
   return (
     <div>
-      <div>
-        <Link to={"/"}>Home</Link>
+      <div className="ns_container py-5">
+        <p>Home</p>
       </div>
     </div>
   );
