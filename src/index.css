@@ -6,4 +6,8 @@
   .ns_container {
     @apply max-w-full mx-auto px-3 md:px-6;
   }
+
+  .ns_social_icon {
+    @apply p-3 bg-white text-dark-special hover:bg-secondary hover:text-white rounded-full transition-all ease-linear duration-300;
+  }
 }
