@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import BannerCarousel from "../../Shared/Carousels/BannerCarousel";
+import { bannerCardSectionData } from "../../../assets/data/homeSecData";
 
 const BannerSec = () => {
   return (
@@ -11,10 +13,30 @@ const BannerSec = () => {
         </div>
         <div className="w-full sm:w-1/2">
           <div className="grid grid-cols-2 gap-5">
-            <div className="h-56 bg-green-500 w-full">item 1</div>
-            <div className="h-56 bg-yellow-500 w-full">item 2</div>
-            <div className="h-56 bg-red-500 w-full">item 3</div>
-            <div className="h-56 bg-purple-500 w-full">item 4</div>
+            {bannerCardSectionData.map((item) => (
+              <Link key={item.id} to={item.btnUrl}>
+                <div className="relative h-56 w-full overflow-hidden rounded-xl group">
+                  <div
+                    style={{ backgroundImage: `url('${item.imgUrl}')` }}
+                    className="bg-cover bg-center h-full w-full transform transition-transform duration-500 group-hover:scale-110"
+                  ></div>
+                  <div className="absolute top-1/2 transform -translate-y-1/2 left-0 flex flex-col gap-1 sm:gap-2 px-2 sm:px-5">
+                    <p className="text-error font-medium text-xs sm:text-sm uppercase">
+                      {item.subTitle}
+                    </p>
+                    <h3 className="font-bold text-dark text-lg sm:text-xl">
+                      {item.title}
+                    </h3>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: item.desc,
+                      }}
+                      className="text-dark-muted text-xs sm:text-sm font-medium"
+                    ></p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
