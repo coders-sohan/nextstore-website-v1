@@ -57,3 +57,41 @@ export const bannerCardSectionData = [
     btnUrl: "/",
   },
 ];
+
+export const homeServiceTypeData = [
+  {
+    id: 1,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1704995498/services_type/service_x7fuzt.png",
+    title: "Free Shipping",
+    subTitle: "On order over $100",
+  },
+  {
+    id: 2,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1704995498/services_type/service-02_wectqq.png",
+    title: "Daily Surprise Offers",
+    subTitle: "Save up to 25% off",
+  },
+  {
+    id: 3,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1704995498/services_type/service-03_ygj0hs.png",
+    title: "24/7 Support",
+    subTitle: "Online Consultations",
+  },
+  {
+    id: 4,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1704995498/services_type/service-04_i3z7ig.png",
+    title: "Affordable Prices",
+    subTitle: "Get Factory direct price",
+  },
+  {
+    id: 5,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1704995498/services_type/service-05_ykc7cq.png",
+    title: "Secure Payments",
+    subTitle: "100% Protected Payments",
+  },
+];
