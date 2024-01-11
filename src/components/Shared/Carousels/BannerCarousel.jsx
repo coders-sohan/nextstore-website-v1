@@ -35,21 +35,23 @@ const BannerCarousel = () => {
                 style={{ backgroundImage: `url('${item.imgUrl}')` }}
                 className="bg-cover bg-center h-full w-full transform transition-transform duration-500 group-hover:scale-110"
               ></div>
-              <div className="absolute top-0 left-0 flex flex-col gap-5 px-10 py-16">
-                <p className="text-error font-medium text-sm uppercase">
+              <div className="absolute top-1/2 transform -translate-y-1/2 left-0 flex flex-col gap-2 sm:gap-5 px-4 sm:px-10">
+                <p className="text-error font-medium text-xs sm:text-sm uppercase">
                   {item.subTitle}
                 </p>
-                <h3 className="font-bold text-dark text-5xl">{item.title}</h3>
+                <h3 className="font-bold text-dark text-3xl sm:text-5xl">
+                  {item.title}
+                </h3>
                 <p
                   dangerouslySetInnerHTML={{
                     __html: item.desc,
                   }}
-                  className="text-dark-muted text-base font-medium"
+                  className="text-dark-muted text-sm sm:text-base font-medium"
                 ></p>
-                <div className="mt-5">
+                <div className="mt-3 sm:mt-5">
                   <Link
                     to={item.btnUrl}
-                    className="uppercase bg-dark-muted text-white px-8 py-3 text-xs font-medium rounded-full hover:bg-primary transition-all ease-linear duration-150"
+                    className="uppercase bg-dark-muted text-white px-4 sm:px-8 py-2 sm:py-3 text-xs font-medium rounded-full hover:bg-primary transition-all ease-linear duration-150"
                   >
                     Buy now
                   </Link>
