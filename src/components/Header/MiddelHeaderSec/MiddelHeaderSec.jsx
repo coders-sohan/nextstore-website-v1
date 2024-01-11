@@ -28,14 +28,14 @@ const MiddelHeaderSec = () => {
     <div className="ns_container">
       <div className="flex justify-between items-center">
         {/* logo */}
-        <div className="-mt-0.5">
+        <div className="w-auto -mt-0.5">
           <Link to={"/"} className="text-3xl font-extrabold tracking-wider">
             <span>Nextshop</span>
             <span className="text-warning">.</span>
           </Link>
         </div>
         {/* search bar */}
-        <div className="w-2/6 md:block hidden">
+        <div className="w-3/6 md:block hidden">
           <div className="flex items-center bg-primary rounded">
             <input
               type="text"
@@ -50,7 +50,7 @@ const MiddelHeaderSec = () => {
           </div>
         </div>
         {/* primary menu */}
-        <div className="w-2/6 flex items-center justify-end gap-6 -mt-0.5">
+        <div className="w-auto flex items-center justify-end gap-6 -mt-0.5">
           {iconMenuData.map((item) => (
             <div key={item.id}>
               {item.href && (
