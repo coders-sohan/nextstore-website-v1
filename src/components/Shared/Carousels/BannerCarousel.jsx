@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 // import css
 import "./BannerCarousel.css";
@@ -25,7 +25,12 @@ const BannerCarousel = () => {
     <div className="h-full w-full overflow-auto rounded-xl">
       <Swiper
         pagination={pagination}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
         className="mySwiper"
       >
         {bannerSliderData.map((item) => (
