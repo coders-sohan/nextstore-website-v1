@@ -9,8 +9,8 @@ const TopFooter = () => {
   return (
     <div>
       <div className="ns_container">
-        <div className="flex justify-center gap-20">
-          <div className="flex items-center gap-5">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-20">
+          <div className="flex items-center justify-center gap-2 sm:gap-5">
             <div>
               <img
                 src={newsletterIcon}
@@ -19,10 +19,12 @@ const TopFooter = () => {
               />
             </div>
             <div>
-              <h2 className="text-2xl font-semibold">Sign Up For Newsletter</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold">
+                Sign Up For Newsletter
+              </h2>
             </div>
           </div>
-          <div className="w-1/3 ">
+          <div className="w-full sm:w-1/3 ">
             <div className="relative flex w-full">
               <Input
                 color="white"

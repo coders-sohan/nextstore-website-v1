@@ -5,7 +5,7 @@ import BottomFooter from "./BottomFooter/BottomFooter";
 const Footer = () => {
   return (
     <>
-      <div className="bg-dark-special text-white py-8 border-b border-gray-dark md:block hidden">
+      <div className="bg-dark-special text-white py-8 border-b border-gray-dark">
         <TopFooter />
       </div>
       <div className="bg-dark-special text-white py-16 border-b border-gray-dark">
