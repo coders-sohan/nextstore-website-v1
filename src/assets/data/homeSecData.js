@@ -142,7 +142,7 @@ export const homeCategoriesData = [
   {
     id: 7,
     imgUrl:
-      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/01_110x110_zwutkc.jpg",
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/07_110x110_pjwhj0.jpg",
     name: "Smartphones",
     quantity: 10,
   },
