@@ -4,7 +4,7 @@ const BottomFooter = () => {
   return (
     <div>
       <div className="ns_container">
-        <div className="flex items-center justify-between">
+        <div className="flex sm:flex-row flex-col-reverse items-center justify-between">
           <div className="text-sm font-semibold">
             <p>
               © {new Date().getFullYear()},{" "}
@@ -26,7 +26,7 @@ const BottomFooter = () => {
               </a>
             </p>
           </div>
-          <div>
+          <div className="mb-4 sm:mb-0">
             <div className="flex items-center gap-1">
               {paymentMethods.map((item) => (
                 <div key={item.id}>
