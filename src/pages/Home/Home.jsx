@@ -1,4 +1,5 @@
 import BannerSec from "../../components/AllSections/Home/BannerSec";
+import CategoriesSec from "../../components/AllSections/Home/CategoriesSec";
 import ServiceTypeSec from "../../components/AllSections/Home/ServiceTypeSec";
 
 const Home = () => {
@@ -7,8 +8,9 @@ const Home = () => {
       <div className="ns_container py-8 sm:py-12">
         <BannerSec />
       </div>
-      <div className="ns_container py-3 sm:py-5 bg-gray-light">
+      <div className="ns_container py-3 sm:py-5 bg-gray-medium">
         <ServiceTypeSec />
+        <CategoriesSec />
       </div>
     </div>
   );
