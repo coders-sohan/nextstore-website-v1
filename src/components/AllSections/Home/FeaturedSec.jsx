@@ -26,8 +26,8 @@ const FeaturedSec = () => {
 
   return (
     <div className="py-12">
-      <div className="mb-10 flex justify-between items-center">
-        <h3 className="text-dark-muted font-bold text-3xl font-poppins">
+      <div className="mb-5 sm:mb-10 flex justify-between items-center">
+        <h3 className="text-dark-muted font-bold text-xl sm:text-3xl font-poppins">
           Featured Collection
         </h3>
         <CarouselController
@@ -38,7 +38,7 @@ const FeaturedSec = () => {
         />
       </div>
       <div>
-        <ProductsCarousel swiperRef={swiperRef} data={productsData}  />
+        <ProductsCarousel swiperRef={swiperRef} data={productsData} />
       </div>
     </div>
   );

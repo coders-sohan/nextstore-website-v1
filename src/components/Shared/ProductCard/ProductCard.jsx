@@ -31,7 +31,7 @@ const ProductCard = ({ item }) => {
           <img
             src={currentImage}
             alt={item.title}
-            className="h-56 w-auto mx-auto transition-opacity duration-500"
+            className="w-auto mx-auto transition-opacity duration-500 h-40 sm:h-56"
           />
         </Link>
         {/* card icons */}
@@ -44,11 +44,11 @@ const ProductCard = ({ item }) => {
               className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
               transition-all duration-150 ease-linear"
             >
-              <FaRegHeart className="h-5 w-5" />
+              <FaRegHeart className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           </div>
           <div
-            className="flex flex-col gap-2 absolute top-14 right-2 opacity-0 group-hover:opacity-100 
+            className="flex flex-col gap-0 sm:gap-2 absolute top-10 sm:top-14 right-2 opacity-100 sm:opacity-0 group-hover:opacity-100 
           transition-all ease-linear duration-300"
           >
             <button
@@ -58,7 +58,7 @@ const ProductCard = ({ item }) => {
               className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
               transition-all duration-150 ease-linear"
             >
-              <PiShuffle className="h-5 w-5" />
+              <PiShuffle className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
             <button
               onClick={() => {
@@ -67,7 +67,7 @@ const ProductCard = ({ item }) => {
               className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
               transition-all duration-150 ease-linear"
             >
-              <BiShowAlt className="h-5 w-5" />
+              <BiShowAlt className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
             <button
               onClick={() => {
@@ -76,7 +76,7 @@ const ProductCard = ({ item }) => {
               className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
               transition-all duration-150 ease-linear"
             >
-              <TbShoppingBag className="h-5 w-5" />
+              <TbShoppingBag className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           </div>
         </div>
@@ -85,10 +85,10 @@ const ProductCard = ({ item }) => {
           <p className="text-sm text-secondary">{item.category}</p>
           <Link
             to={"/"}
-            className="font-semibold text-dark-special text-base font-poppins hover:underline underline-offset-2"
+            className="font-semibold text-dark-special text-sm font-poppins hover:underline underline-offset-2 sm:text-base"
             title={item.title}
           >
-            {item.title.slice(0, 40)}...
+            {item.title.slice(0, 30)}...
           </Link>
           <div>
             <span className="flex gap-1">

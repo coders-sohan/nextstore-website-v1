@@ -14,7 +14,7 @@ const ProductsCarousel = ({ swiperRef, data }) => {
         ref={swiperRef}
         spaceBetween={20}
         breakpoints={{
-          640: {
+          320: {
             slidesPerView: 2,
           },
           768: {
