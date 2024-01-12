@@ -15,7 +15,9 @@ const MiddleFooter = () => {
       <div className="ns_container">
         <div className="grid grid-cols-2 sm:grid-cols-7 gap-10 sm:gap-0">
           <div className="col-span-2">
-            <h3 className="font-bold text-lg mb-6">Contact us</h3>
+            <h3 className="font-bold text-lg mb-3 sm:mb-5 underline underline-offset-2">
+              Contact us
+            </h3>
             <div className="flex flex-col gap-2 sm:gap-5">
               <div className="text-sm">
                 <h4 className="mb-2">Demo Store</h4>
@@ -47,7 +49,9 @@ const MiddleFooter = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-6">Information</h3>
+            <h3 className="font-bold text-lg mb-3 sm:mb-5 underline underline-offset-2">
+              Information
+            </h3>
             <div className="flex flex-col gap-2 sm:gap-5">
               {informationData.map((item) => (
                 <Link
@@ -61,7 +65,9 @@ const MiddleFooter = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-6">Account</h3>
+            <h3 className="font-bold text-lg mb-3 sm:mb-5 underline underline-offset-2">
+              Account
+            </h3>
             <div className="flex flex-col gap-2 sm:gap-5">
               {accountData.map((item) => (
                 <Link
@@ -75,7 +81,9 @@ const MiddleFooter = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-bold text-lg mb-6">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-3 sm:mb-5 underline underline-offset-2">
+              Quick Links
+            </h3>
             <div className="flex flex-col gap-2 sm:gap-5">
               {quickLinksData.map((item) => (
                 <Link
@@ -89,7 +97,9 @@ const MiddleFooter = () => {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <h3 className="font-bold text-lg mb-6">Our Apps</h3>
+            <h3 className="font-bold text-lg mb-3 sm:mb-5 underline underline-offset-2">
+              Our Apps
+            </h3>
             <p className="text-sm font-normal leading-relaxed">
               Download our App and get extra <br /> 15% Discount on your first
               Order..!
