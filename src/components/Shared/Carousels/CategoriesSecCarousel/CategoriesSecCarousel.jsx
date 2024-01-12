@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 
 const CategoriesSecCarousel = () => {
   const chunkedData = chunk(homeCategoriesData, 2);
-  console.log(chunkedData);
+
   return (
     <>
       <Swiper
