@@ -38,6 +38,7 @@ const ServiceTypeCarousel = () => {
             autoplay: false,
           },
         }}
+        grabCursor={true}
         className="mySwiper"
       >
         <div className="flex items-center justify-between">
