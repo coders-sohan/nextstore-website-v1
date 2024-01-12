@@ -8,7 +8,7 @@ const Home = () => {
       <div className="ns_container py-8 sm:py-12">
         <BannerSec />
       </div>
-      <div className="ns_container py-3 sm:py-5 bg-gray-medium">
+      <div className="ns_container py-3 sm:py-5 bg-gray-special">
         <ServiceTypeSec />
         <CategoriesSec />
       </div>

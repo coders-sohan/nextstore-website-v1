@@ -95,3 +95,76 @@ export const homeServiceTypeData = [
     subTitle: "100% Protected Payments",
   },
 ];
+
+export const homeCategoriesData = [
+  {
+    id: 1,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/02_110x110_jsyxmu.jpg",
+    name: "Computers & Laptop",
+    quantity: 8,
+  },
+  {
+    id: 2,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045552/categories_images/05_110x110_jywamf.jpg",
+    name: "Cameras & Videos",
+    quantity: 10,
+  },
+  {
+    id: 3,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/04_110x110_yn98xw.jpg",
+    name: "Smart Television",
+    quantity: 12,
+  },
+  {
+    id: 4,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045552/categories_images/09_110x110_cpgha7.jpg",
+    name: "Smartwatches",
+    quantity: 13,
+  },
+  {
+    id: 5,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/06_110x110_z4fy4d.jpg",
+    name: "Headphones",
+    quantity: 10,
+  },
+  {
+    id: 6,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/01_110x110_zwutkc.jpg",
+    name: "Mobiles & tablets",
+    quantity: 15,
+  },
+  {
+    id: 7,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/01_110x110_zwutkc.jpg",
+    name: "Smartphones",
+    quantity: 10,
+  },
+  {
+    id: 8,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045552/categories_images/homeapp_hfhubn.jpg",
+    name: "Accessories",
+    quantity: 8,
+  },
+  {
+    id: 9,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/08_110x110_muabkz.jpg",
+    name: "Monitors",
+    quantity: 10,
+  },
+  {
+    id: 10,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045552/categories_images/10_110x110_xdi3wo.jpg",
+    name: "iPads & Tablets",
+    quantity: 12,
+  },
+];
