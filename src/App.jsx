@@ -4,6 +4,7 @@ import { router } from "./routes/MainRouter";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function App() {
   return (
