@@ -23,6 +23,7 @@ export default withMT({
           dark: "#5d6167",
           medium: "#dddbf1",
           light: "#f8f8ff",
+          special: "#f5f5f7",
         },
         // custom black colors
         black: "#030811",
