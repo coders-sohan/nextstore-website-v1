@@ -129,14 +129,14 @@ export const homeCategoriesData = [
     id: 5,
     imgUrl:
       "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/06_110x110_z4fy4d.jpg",
-    name: "Headphones",
+    name: "Games & Consoles",
     quantity: 10,
   },
   {
     id: 6,
     imgUrl:
-      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045551/categories_images/01_110x110_zwutkc.jpg",
-    name: "Mobiles & tablets",
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705045552/categories_images/headphone_tffxdr.jpg",
+    name: "Headphones",
     quantity: 15,
   },
   {

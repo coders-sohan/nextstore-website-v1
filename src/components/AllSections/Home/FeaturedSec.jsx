@@ -1,3 +1,6 @@
+import { productsData } from "../../../assets/data/productsData";
+import ProductsCarousel from "../../Shared/Carousels/ProductsCarousel/ProductsCarousel";
+
 const FeaturedSec = () => {
   return (
     <div className="py-12">
@@ -6,7 +9,9 @@ const FeaturedSec = () => {
           Featured Collection
         </h3>
       </div>
-      <div>productCards</div>
+      <div>
+        <ProductsCarousel data={productsData} />
+      </div>
     </div>
   );
 };
