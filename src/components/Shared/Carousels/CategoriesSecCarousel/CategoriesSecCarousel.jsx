@@ -1,16 +1,14 @@
+import { Link } from "react-router-dom";
 // lodash is a utility library that provides helpful methods like 'chunk'
 import { chunk } from "lodash";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper modules
 import { Autoplay } from "swiper/modules";
-// Import Swiper styles
-import "swiper/css";
 // import css
 import "../Carousel.css";
 
 import { homeCategoriesData } from "../../../../assets/data/homeSecData";
-import { Link } from "react-router-dom";
 
 const CategoriesSecCarousel = () => {
   const chunkedData = chunk(homeCategoriesData, 2);
@@ -25,14 +23,6 @@ const CategoriesSecCarousel = () => {
           disableOnInteraction: false,
         }}
         breakpoints={{
-          375: {
-            slidesPerView: 1,
-            autoplay: false,
-          },
-          414: {
-            slidesPerView: 1,
-            autoplay: false,
-          },
           640: {
             slidesPerView: 2,
             autoplay: false,
