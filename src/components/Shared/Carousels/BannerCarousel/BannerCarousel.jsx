@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -6,9 +7,8 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 // import css
-import "./BannerCarousel.css";
-import { bannerSliderData } from "../../../assets/data/homeSecData";
-import { Link } from "react-router-dom";
+import "../Carousel.css";
+import { bannerSliderData } from "../../../../assets/data/homeSecData";
 
 const BannerCarousel = () => {
   const pagination = {

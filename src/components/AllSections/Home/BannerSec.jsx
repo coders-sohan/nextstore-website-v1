@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BannerCarousel from "../../Shared/Carousels/BannerCarousel";
+import BannerCarousel from "../../Shared/Carousels/BannerCarousel/BannerCarousel";
 import { bannerCardSectionData } from "../../../assets/data/homeSecData";
 
 const BannerSec = () => {
@@ -15,7 +15,7 @@ const BannerSec = () => {
           <div className="grid grid-cols-2 gap-5">
             {bannerCardSectionData.map((item) => (
               <Link key={item.id} to={item.btnUrl}>
-                <div className="relative h-56 w-full overflow-hidden rounded-xl group">
+                <div className="relative h-36 w-auto sm:h-56 sm:w-full overflow-hidden rounded-xl group">
                   <div
                     style={{ backgroundImage: `url('${item.imgUrl}')` }}
                     className="bg-cover bg-center h-full w-full transform transition-transform duration-500 group-hover:scale-110"
@@ -24,14 +24,14 @@ const BannerSec = () => {
                     <p className="text-error font-medium text-xs sm:text-sm uppercase">
                       {item.subTitle}
                     </p>
-                    <h3 className="font-bold text-dark text-lg sm:text-xl">
+                    <h3 className="font-semibold sm:font-bold text-dark text-sm sm:text-xl">
                       {item.title}
                     </h3>
                     <p
                       dangerouslySetInnerHTML={{
                         __html: item.desc,
                       }}
-                      className="text-dark-muted text-xs sm:text-sm font-medium"
+                      className="text-dark-muted text-xs sm:text-xs font-medium hidden sm:block"
                     ></p>
                   </div>
                 </div>
