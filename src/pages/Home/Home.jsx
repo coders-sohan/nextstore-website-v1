@@ -2,6 +2,7 @@ import BannerSec from "../../components/AllSections/Home/BannerSec";
 import CategoriesSec from "../../components/AllSections/Home/CategoriesSec";
 import FeaturedSec from "../../components/AllSections/Home/FeaturedSec";
 import ServiceTypeSec from "../../components/AllSections/Home/ServiceTypeSec";
+import ShowcaseSec from "../../components/AllSections/Home/ShowcaseSec";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <ServiceTypeSec />
         <CategoriesSec />
         <FeaturedSec />
+        <ShowcaseSec />
       </div>
     </div>
   );
