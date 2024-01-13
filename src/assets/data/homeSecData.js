@@ -168,3 +168,43 @@ export const homeCategoriesData = [
     quantity: 12,
   },
 ];
+
+export const homeShowcaseProductsData = [
+  {
+    id: 1,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705151716/showcase_products/subbanner-01_xrp65i.jpg",
+    title: "Smart Watch Series 7",
+    subTitle: "big screen",
+    desc: "From $399or $16.62/mo for 24 mo.*",
+    className: "text-white",
+    btnUrl: "/",
+  },
+  {
+    id: 2,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705151716/showcase_products/subbanner-02_xmodhx.jpg",
+    title: "600 nits of brightness.",
+    subTitle: "Studio Display",
+    desc: "15-inch 5K Retina display",
+    btnUrl: "/",
+  },
+  {
+    id: 3,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705151716/showcase_products/subbanner-03_xwqj6r.jpg",
+    title: "iPhone 13 Pro.",
+    subTitle: "smartphones",
+    desc: "Now in Green. From $999.00 or $41.62/mo for 24 mo. Footnote*",
+    btnUrl: "/",
+  },
+  {
+    id: 4,
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705151716/showcase_products/subbanner-04_xcg6nw.jpg",
+    title: "Room-filling sound.",
+    subTitle: "home speakers",
+    desc: "From $699 or $116.58/mo for 12 mo.*",
+    btnUrl: "/",
+  },
+];
