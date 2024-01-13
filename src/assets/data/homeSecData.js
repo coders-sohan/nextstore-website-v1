@@ -177,7 +177,7 @@ export const homeShowcaseProductsData = [
     title: "Smart Watch Series 7",
     subTitle: "big screen",
     desc: "From $399or $16.62/mo for 24 mo.*",
-    className: "text-white",
+    className: "text-white bg-dark",
     btnUrl: "/",
   },
   {
@@ -192,7 +192,7 @@ export const homeShowcaseProductsData = [
   {
     id: 3,
     imgUrl:
-      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705151716/showcase_products/subbanner-03_xwqj6r.jpg",
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705151717/showcase_products/subbanner-03_onvt9h.jpg",
     title: "iPhone 13 Pro.",
     subTitle: "smartphones",
     desc: "Now in Green. From $999.00 or $41.62/mo for 24 mo. Footnote*",
