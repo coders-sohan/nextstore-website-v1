@@ -41,7 +41,7 @@ const ProductCard = ({ item }) => {
               onClick={() => {
                 console.log("clicked add to wishlist");
               }}
-              className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
+              className="bg-white hover:bg-secondary text-secondary hover:text-white rounded-full p-2 
               transition-all duration-150 ease-linear"
             >
               <FaRegHeart className="h-4 w-4 sm:h-5 sm:w-5" />
