@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 
 const SpecialProductCard = ({ item }) => {
-  console.log(item);
   return (
-    <div>
-      <div>Special Product Card</div>
+    <div className="bg-white p-5 rounded-xl">
+      <div>Special Product Card {item.id}</div>
     </div>
   );
 };

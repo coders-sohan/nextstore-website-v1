@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+// lodash is a utility library that provides helpful methods like 'chunk'
+import { chunk } from "lodash";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import css
@@ -6,6 +8,9 @@ import "../Carousel.css";
 import SpecialProductCard from "../../ProductCard/SpecialProductCard";
 
 const SpecialProductsCarousel = ({ swiperRef, data }) => {
+  const chunkedData = chunk(data, 2);
+  console.log(chunkedData);
+
   return (
     <>
       <Swiper
@@ -24,9 +29,13 @@ const SpecialProductsCarousel = ({ swiperRef, data }) => {
         }}
         className="mySwiper"
       >
-        {data.map((item) => (
-          <SwiperSlide key={item.id}>
-            <SpecialProductCard item={item} />
+        {chunkedData.map((chunk, index) => (
+          <SwiperSlide key={index}>
+            <div className="flex flex-col gap-5">
+              {chunk.map((item) => (
+                <SpecialProductCard key={item.id} item={item} />
+              ))}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
