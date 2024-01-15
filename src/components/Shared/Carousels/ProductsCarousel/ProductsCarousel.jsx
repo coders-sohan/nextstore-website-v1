@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper modules
-// import { Navigation } from "swiper/modules";
 // import css
 import "../Carousel.css";
 import ProductCard from "../../ProductCard/ProductCard";
