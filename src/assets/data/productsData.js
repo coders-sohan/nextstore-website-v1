@@ -170,7 +170,7 @@ export const productsData = [
         url: "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705061782/products_images/6/17_02_884x_rouikp.jpg",
       },
       {
-        id: "imgno2",
+        id: "imgno3",
         url: "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705061784/products_images/6/17_00_884x_wwsjqt.jpg",
       },
     ],

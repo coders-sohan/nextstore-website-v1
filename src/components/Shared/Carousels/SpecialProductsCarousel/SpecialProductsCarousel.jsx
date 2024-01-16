@@ -9,8 +9,7 @@ import SpecialProductCard from "../../ProductCard/SpecialProductCard";
 
 const SpecialProductsCarousel = ({ swiperRef, data }) => {
   const chunkedData = chunk(data, 2);
-  console.log(chunkedData);
-
+  
   return (
     <>
       <Swiper
