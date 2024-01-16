@@ -30,14 +30,14 @@ const SpecialProductCard = ({ item }) => {
         <div className="w-1/2 px-1">
           <div className="flex flex-col gap-2">
             <div>
-              <Link to={`/`} className="text-sm text-secondary">
+              <Link to={`/`} className="text-xs sm:text-sm text-secondary">
                 {item.category}
               </Link>
             </div>
             <div>
               <Link
                 to={`/`}
-                className="font-semibold font-poppins hover:underline underline-offset-1"
+                className="text-sm sm:text-base font-semibold font-poppins hover:underline underline-offset-1"
                 title={item.title}
               >
                 {item.title.slice(0, 35)}...
@@ -45,25 +45,25 @@ const SpecialProductCard = ({ item }) => {
             </div>
             <div className="mt-3">
               <span className="flex gap-1">
-                <FaStar className="text-tertiary h-4 w-4" />
-                <FaStar className="text-tertiary h-4 w-4" />
-                <FaStar className="text-tertiary h-4 w-4" />
-                <FaStar className="text-tertiary h-4 w-4" />
-                <FaStar className="text-gray-dark h-4 w-4" />
+                <FaStar className="h-3 sm:h-4 w-3 sm:w-4 text-tertiary" />
+                <FaStar className="h-3 sm:h-4 w-3 sm:w-4 text-tertiary" />
+                <FaStar className="h-3 sm:h-4 w-3 sm:w-4 text-tertiary" />
+                <FaStar className="h-3 sm:h-4 w-3 sm:w-4 text-tertiary" />
+                <FaStar className="h-3 sm:h-4 w-3 sm:w-4 text-gray-dark" />
               </span>
             </div>
             <div className="mt-2">
-              <p className="font-semibold text-dark-muted">
+              <p className="text-xs sm:text-sm font-semibold text-dark-muted">
                 ${item.price.toFixed(2)}
               </p>
             </div>
             <div className="mt-2">
-              <span>day counter here</span>
+              <span className="text-xs sm:text-sm">day counter here</span>
             </div>
-            <div className="mt-3">
+            <div className="mt-3 text-center sm:text-left">
               <Link
                 to={"/"}
-                className="text-sm font-semibold px-5 py-1.5 bg-primary text-white rounded-full inline-block transition-all duration-150 ease-linear group-hover:bg-dark"
+                className="text-xs sm:text-sm font-semibold px-3 sm:px-5 py-1 sm:py-1.5 bg-primary text-white rounded-full inline-block transition-all duration-150 ease-linear group-hover:bg-dark"
               >
                 Option
               </Link>
