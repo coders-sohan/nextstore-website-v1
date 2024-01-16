@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
 import ProductMiniCarousel from "../Carousels/SpecialProductsCarousel/ProductMiniCarousel";
+import DynamicImage from "../LazyLoadImage/DynamicImage";
 
 const SpecialProductCard = ({ item }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -12,7 +13,7 @@ const SpecialProductCard = ({ item }) => {
       <div className="flex gap-3">
         <div className="w-1/2 flex flex-col gap-3">
           <div>
-            <img
+            <DynamicImage
               src={selectedImage ? selectedImage.url : item.images[0].url}
               alt={item.title}
               className="h-full w-full object-cover"

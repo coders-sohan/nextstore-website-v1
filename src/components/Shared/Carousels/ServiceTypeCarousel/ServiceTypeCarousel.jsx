@@ -6,6 +6,7 @@ import { Autoplay } from "swiper/modules";
 import "../Carousel.css";
 // import others import
 import { homeServiceTypeData } from "../../../../assets/data/homeSecData";
+import DynamicImage from "../../LazyLoadImage/DynamicImage";
 
 const ServiceTypeCarousel = () => {
   return (
@@ -43,7 +44,7 @@ const ServiceTypeCarousel = () => {
             <SwiperSlide key={item.id} className="flex justify-center">
               <div className="flex items-center gap-5">
                 <div>
-                  <img src={item.imgUrl} alt={item.title} />
+                  <DynamicImage src={item.imgUrl} alt={item.title} />
                 </div>
                 <div className="flex flex-col gap-1">
                   <h3 className="font-bold text-lg text-dark-special">

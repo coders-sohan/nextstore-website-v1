@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 // import css
 import "../Carousel.css";
-
 import { homeCategoriesData } from "../../../../assets/data/homeSecData";
+import DynamicImage from "../../LazyLoadImage/DynamicImage";
 
 const CategoriesSecCarousel = () => {
   const chunkedData = chunk(homeCategoriesData, 2);
@@ -62,7 +62,7 @@ const CategoriesSecCarousel = () => {
                       </p>
                     </div>
                     <div>
-                      <img
+                      <DynamicImage
                         src={item.imgUrl}
                         alt={item.name}
                         className="h-20 w-auto"

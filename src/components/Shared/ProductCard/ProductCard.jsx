@@ -5,6 +5,7 @@ import { FaStar, FaRegHeart } from "react-icons/fa6";
 import { PiShuffle } from "react-icons/pi";
 import { BiShowAlt } from "react-icons/bi";
 import { TbShoppingBag } from "react-icons/tb";
+import DynamicImage from "../LazyLoadImage/DynamicImage";
 
 const ProductCard = ({ item }) => {
   const [currentImage, setCurrentImage] = useState(item.images[0].url);
@@ -28,7 +29,7 @@ const ProductCard = ({ item }) => {
       <div className="flex flex-col relative">
         {/* card images */}
         <Link to={"/"}>
-          <img
+          <DynamicImage
             src={currentImage}
             alt={item.title}
             className="w-auto mx-auto transition-opacity duration-500 h-40 sm:h-56"
