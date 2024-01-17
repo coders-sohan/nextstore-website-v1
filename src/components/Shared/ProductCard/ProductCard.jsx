@@ -32,7 +32,7 @@ const ProductCard = ({ item }) => {
           <DynamicImage
             src={currentImage}
             alt={item.title}
-            className="w-auto mx-auto transition-opacity duration-500 h-40 sm:h-56"
+            className="w-auto mx-auto transition-opacity duration-500 h-40 sm:h-56 rounded-xl"
           />
         </Link>
         {/* card icons */}
