@@ -2,8 +2,9 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa6";
-import ProductMiniCarousel from "../Carousels/SpecialProductsCarousel/ProductMiniCarousel";
 import DynamicImage from "../LazyLoadImage/DynamicImage";
+import ProductMiniCarousel from "../Carousels/SpecialProductsCarousel/ProductMiniCarousel";
+import ProductTimeCounter from "../TimeCounter/ProductTimeCounter";
 
 const SpecialProductCard = ({ item }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -59,7 +60,9 @@ const SpecialProductCard = ({ item }) => {
               </p>
             </div>
             <div className="mt-2">
-              <span className="text-xs sm:text-sm">day counter here</span>
+              <span className="text-xs sm:text-sm">
+                <ProductTimeCounter date="2026-06-04T16:49:49.142Z" />
+              </span>
             </div>
             <div className="mt-3 text-center sm:text-left">
               <Link
