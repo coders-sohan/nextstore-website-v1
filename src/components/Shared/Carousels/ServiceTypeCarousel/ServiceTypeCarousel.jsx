@@ -44,7 +44,11 @@ const ServiceTypeCarousel = () => {
             <SwiperSlide key={item.id} className="flex justify-center">
               <div className="flex items-center gap-5">
                 <div>
-                  <DynamicImage src={item.imgUrl} alt={item.title} />
+                  <DynamicImage
+                    src={item.imgUrl}
+                    alt={item.title}
+                    dimension={{ height: 884, width: 884 }}
+                  />
                 </div>
                 <div className="flex flex-col gap-1">
                   <h3 className="font-bold text-lg text-dark-special">

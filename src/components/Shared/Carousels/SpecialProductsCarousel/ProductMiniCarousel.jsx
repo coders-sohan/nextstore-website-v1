@@ -71,6 +71,7 @@ const ProductMiniCarousel = ({ setSelectedImage, imagesData }) => {
             <DynamicImage
               src={image.url}
               alt={image.name}
+              dimension={{ height: 884, width: 884 }}
               className="h-full w-full object-cover"
             />
           </SwiperSlide>

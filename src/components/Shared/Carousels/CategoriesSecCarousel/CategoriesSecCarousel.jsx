@@ -65,6 +65,7 @@ const CategoriesSecCarousel = () => {
                       <DynamicImage
                         src={item.imgUrl}
                         alt={item.name}
+                        dimension={{ height: 110, width: 110 }}
                         className="h-20 w-auto"
                       />
                     </div>

@@ -17,6 +17,7 @@ const SpecialProductCard = ({ item }) => {
             <DynamicImage
               src={selectedImage ? selectedImage.url : item.images[0].url}
               alt={item.title}
+              dimension={{ height: 884, width: 884 }}
               className="h-full w-full object-cover"
             />
           </div>
