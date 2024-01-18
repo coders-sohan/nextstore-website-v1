@@ -3,13 +3,12 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 const DynamicImage = ({ src, alt, dimension, className }) => {
-  console.log(dimension);
   return (
     <LazyLoadImage
       src={
         src
           ? src
-          : `https://placehold.co/${dimension.height}x${dimension.width}/070f22/070f22`
+          : `https://placehold.co/${dimension.height}x${dimension.width}/FFFFFF/5d6167?text=Error%20Load%20Image`
       }
       alt={alt ? alt : "a image is here"}
       effect="blur"
