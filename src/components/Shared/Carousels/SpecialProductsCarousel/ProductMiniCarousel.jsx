@@ -16,6 +16,8 @@ const ProductMiniCarousel = ({ setSelectedImage, imagesData }) => {
   const [swiper, setSwiper] = useState(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
+  // // current indexing state for auto image change every 3 seconds
   // const [currentIndex, setCurrentIndex] = useState(0);
 
   // // Function to go to the next image
