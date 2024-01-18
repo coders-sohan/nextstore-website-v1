@@ -1,13 +1,13 @@
-import { 
-  // useCallback, 
-  // useEffect, 
-  useState 
+import {
+  // useCallback,
+  // useEffect,
+  useState,
 } from "react";
 import PropTypes from "prop-types";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-// import { Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 // import icons
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import DynamicImage from "../../LazyLoadImage/DynamicImage";
@@ -52,11 +52,11 @@ const ProductMiniCarousel = ({ setSelectedImage, imagesData }) => {
       <Swiper
         spaceBetween={10}
         slidesPerView={2}
-        // autoplay={{
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // }}
-        // modules={[Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
         onSwiper={setSwiper}
         className="mySwiper"
       >
