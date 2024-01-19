@@ -232,3 +232,54 @@ export const homeCategoriesTabData = [
     quantity: 5,
   },
 ];
+
+export const homeBrandsData = [
+  {
+    id: 1,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646707/brands_img/brand-01_nsjmr8.png",
+    name: "Apple",
+  },
+  {
+    id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646707/brands_img/brand-02_qvwo4c.png",
+    name: "Bose",
+  },
+  {
+    id: 3,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646707/brands_img/brand-03_trspcx.png",
+    name: "Canon",
+  },
+  {
+    id: 4,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646708/brands_img/brand-04_z7pip9.png",
+    name: "Dell",
+  },
+  {
+    id: 5,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646708/brands_img/brand-05_fvgdkd.png",
+    name: "Intel",
+  },
+  {
+    id: 6,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646707/brands_img/brand-06_cfhxwc.png",
+    name: "LG",
+  },
+  {
+    id: 7,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646707/brands_img/brand-07_zg6ic9.png",
+    name: "Samsung",
+  },
+  {
+    id: 8,
+    imageUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705646707/brands_img/brand-08_bcsy3i.png",
+    name: "SanDisk",
+  },
+];
