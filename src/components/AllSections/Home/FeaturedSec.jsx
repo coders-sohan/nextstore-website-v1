@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { productsData } from "../../../assets/data/productsData";
+// import { productsData } from "../../../assets/data/productsData";
 import ProductsCarousel from "../../Shared/Carousels/ProductsCarousel/ProductsCarousel";
 import CarouselController from "../../Shared/Carousels/CarouselController";
 // redux toolkit
@@ -10,8 +10,8 @@ const FeaturedSec = () => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
-  const { data, error, isLoading } = useGetAllProductsQuery();
-  console.log(data, error, isLoading);
+  const { data: productsData, error, isLoading } = useGetAllProductsQuery();
+  console.log(productsData, error, isLoading);
 
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -50,7 +50,7 @@ const FeaturedSec = () => {
             md: 3,
             lg: 6,
           }}
-          data={productsData}
+          data={productsData?.data}
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ import SpecialProductCard from "../../ProductCard/SpecialProductCard";
 
 const SpecialProductsCarousel = ({ swiperRef, data }) => {
   const chunkedData = chunk(data, 2);
-  
+
   return (
     <>
       <Swiper
@@ -28,11 +28,11 @@ const SpecialProductsCarousel = ({ swiperRef, data }) => {
         }}
         className="mySwiper"
       >
-        {chunkedData.map((chunk, index) => (
+        {chunkedData?.map((chunk, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col gap-5">
-              {chunk.map((item) => (
-                <SpecialProductCard key={item.id} item={item} />
+              {chunk?.map((item) => (
+                <SpecialProductCard key={item._id} item={item} />
               ))}
             </div>
           </SwiperSlide>

@@ -1,14 +1,19 @@
 import { useRef, useState } from "react";
-import { productsData } from "../../../assets/data/productsData";
+// import { productsData } from "../../../assets/data/productsData";
 import CarouselController from "../../Shared/Carousels/CarouselController";
 import CategoriesTab from "./SubSections/CategoriesTab";
 import PopularProductsAds from "./SubSections/PopularProductsAds";
 import ProductsCarousel from "../../Shared/Carousels/ProductsCarousel/ProductsCarousel";
+// redux toolkit
+import { useGetAllProductsQuery } from "../../../redux/services/products/productsService";
 
 const PopularProductsSec = () => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
+  const { data: productsData, error, isLoading } = useGetAllProductsQuery();
+  console.log(productsData, error, isLoading);
 
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -54,7 +59,7 @@ const PopularProductsSec = () => {
               md: 3,
               lg: 4,
             }}
-            data={productsData}
+            data={productsData?.data}
           />
         </div>
       </div>
