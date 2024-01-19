@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 import { productsData } from "../../../assets/data/productsData";
-import ProductsCarousel from "../../Shared/Carousels/ProductsCarousel/ProductsCarousel";
 import CarouselController from "../../Shared/Carousels/CarouselController";
 import CategoriesTab from "./SubSections/CategoriesTab";
 import PopularProductsAds from "./SubSections/PopularProductsAds";
+import ProductsCarousel from "../../Shared/Carousels/ProductsCarousel/ProductsCarousel";
 
 const PopularProductsSec = () => {
   const swiperRef = useRef(null);
