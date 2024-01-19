@@ -33,14 +33,12 @@ const BlogCard = ({ item }) => {
           {item.description}
         </p>
         <div className="mt-3">
-          <Link
-            onClick={smoothScrollToTop}
-            to={"/"}
+          <button
             className="bg-dark group-hover:bg-tertiary text-white px-5 py-2 uppercase text-sm font-poppins font-semibold 
             inline-block rounded-full transition-all duration-200 ease-linear"
           >
             Read more
-          </Link>
+          </button>
         </div>
       </div>
     </Link>

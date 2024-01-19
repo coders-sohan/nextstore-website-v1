@@ -2,11 +2,15 @@ import { useRef, useState } from "react";
 import { blogsData } from "../../../assets/data/blogsData";
 import CarouselController from "../../Shared/Carousels/CarouselController";
 import BlogCarousel from "../../Shared/Carousels/BlogCarousel/BlogCarousel";
+import { useGetAllBlogsMutation } from "../../../redux/services/blogs/blogs.service";
 
 const BlogsSec = () => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
+  const { data, error, isLoading } = useGetAllBlogsMutation();
+  console.log(data, error, isLoading);
 
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
