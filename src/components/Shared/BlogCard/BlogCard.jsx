@@ -36,7 +36,7 @@ const BlogCard = ({ item }) => {
           <Link
             onClick={smoothScrollToTop}
             to={"/"}
-            className="bg-dark group-hover:bg-tertiary text-white px-5 py-1.5 uppercase text-sm font-poppins font-semibold 
+            className="bg-dark group-hover:bg-tertiary text-white px-5 py-2 uppercase text-sm font-poppins font-semibold 
             inline-block rounded-full transition-all duration-200 ease-linear"
           >
             Read more
