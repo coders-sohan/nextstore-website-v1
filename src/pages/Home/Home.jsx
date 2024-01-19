@@ -1,9 +1,10 @@
 import BannerSec from "../../components/AllSections/Home/BannerSec";
+import ServiceTypeSec from "../../components/AllSections/Home/ServiceTypeSec";
 import CategoriesSec from "../../components/AllSections/Home/CategoriesSec";
 import FeaturedSec from "../../components/AllSections/Home/FeaturedSec";
-import ServiceTypeSec from "../../components/AllSections/Home/ServiceTypeSec";
 import ShowcaseSec from "../../components/AllSections/Home/ShowcaseSec";
 import SpecialProductsSec from "../../components/AllSections/Home/SpecialProductsSec";
+import PopularProductsSec from "../../components/AllSections/Home/PopularProductsSec";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <FeaturedSec />
         <ShowcaseSec />
         <SpecialProductsSec />
+        <PopularProductsSec />
       </div>
     </div>
   );

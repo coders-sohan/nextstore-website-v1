@@ -208,3 +208,27 @@ export const homeShowcaseProductsData = [
     btnUrl: "/",
   },
 ];
+
+export const homeCategoriesTabData = [
+  {
+    id: 1,
+    name: "Samrt Watchs",
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705642454/categories_icon/cat-icon-03_jxh14x.png",
+    quantity: 5,
+  },
+  {
+    id: 2,
+    name: "Speakers",
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705642454/categories_icon/cat-icon-01_krfwo7.webp",
+    quantity: 5,
+  },
+  {
+    id: 3,
+    name: "Leptops",
+    imgUrl:
+      "https://res.cloudinary.com/dxzw1lz0v/image/upload/v1705642453/categories_icon/cat-icon-02_j5fcyc.png",
+    quantity: 5,
+  },
+];
