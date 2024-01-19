@@ -26,7 +26,7 @@ const SpecialProductCard = ({ item }) => {
           </div>
           {/* card icons */}
           <div>
-            <div className="absolute top-2 right-2">
+            <div className="absolute top-0 right-2">
               <button
                 onClick={() => {
                   console.log("clicked add to wishlist");
@@ -38,7 +38,7 @@ const SpecialProductCard = ({ item }) => {
               </button>
             </div>
             <div
-              className="flex flex-col gap-0 sm:gap-2 absolute top-10 sm:top-14 right-2 opacity-100 sm:opacity-0 group-hover:opacity-100 
+              className="flex flex-col gap-0 sm:gap-2 absolute top-8 sm:top-11 right-2 opacity-100 sm:opacity-0 group-hover:opacity-100 
           transition-all ease-linear duration-300"
             >
               <button
