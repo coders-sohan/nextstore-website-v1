@@ -24,7 +24,7 @@ const ProductsCarousel = ({ swiperRef, slidesPerView, data }) => {
         }}
         className="mySwiper"
       >
-        {data.map((item) => (
+        {data?.map((item) => (
           <SwiperSlide key={item.id}>
             <ProductCard item={item} />
           </SwiperSlide>

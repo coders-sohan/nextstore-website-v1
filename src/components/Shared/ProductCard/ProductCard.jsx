@@ -9,16 +9,16 @@ import smoothScrollToTop from "../SmoothScroll/SmoothScroll";
 import DynamicImage from "../LazyLoadImage/DynamicImage";
 
 const ProductCard = ({ item }) => {
-  const [currentImage, setCurrentImage] = useState(item.images[0].url);
+  const [currentImage, setCurrentImage] = useState(item.images[0]?.url);
 
   const handleMouseEnter = () => {
     if (item.images[1]) {
-      setCurrentImage(item.images[1].url);
+      setCurrentImage(item.images[1]?.url);
     }
   };
 
   const handleMouseLeave = () => {
-    setCurrentImage(item.images[0].url);
+    setCurrentImage(item.images[0]?.url);
   };
 
   return (
