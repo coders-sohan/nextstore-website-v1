@@ -6,6 +6,7 @@ import ShowcaseSec from "../../components/AllSections/Home/ShowcaseSec";
 import SpecialProductsSec from "../../components/AllSections/Home/SpecialProductsSec";
 import PopularProductsSec from "../../components/AllSections/Home/PopularProductsSec";
 import BrandsSec from "../../components/AllSections/Home/BrandsSec";
+import BlogsSec from "../../components/AllSections/Home/BlogsSec";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
         <SpecialProductsSec />
         <PopularProductsSec />
         <BrandsSec />
+        <BlogsSec />
       </div>
     </div>
   );
