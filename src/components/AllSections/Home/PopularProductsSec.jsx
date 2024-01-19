@@ -39,18 +39,18 @@ const PopularProductsSec = () => {
           goNext={goNext}
         />
       </div>
-      <div className="grid grid-cols-6 gap-5">
-        <div className="my-2">
+      <div className="grid grid-cols-2 sm:grid-cols-6 gap-5">
+        <div className="my-2 col-span-2 sm:col-span-1">
           <CategoriesTab />
         </div>
-        <div className="my-2">
+        <div className="my-2 col-span-1">
           <PopularProductsAds />
         </div>
-        <div className="col-span-4">
+        <div className="col-span-1 sm:col-span-4">
           <ProductsCarousel
             swiperRef={swiperRef}
             slidesPerView={{
-              sm: 2,
+              sm: 1,
               md: 3,
               lg: 4,
             }}
