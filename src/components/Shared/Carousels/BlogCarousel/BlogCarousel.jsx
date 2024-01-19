@@ -6,8 +6,6 @@ import "../Carousel.css";
 import BlogCard from "../../BlogCard/BlogCard";
 
 const BlogCarousel = ({ swiperRef, slidesPerView, data }) => {
-  console.log(swiperRef, slidesPerView, data);
-
   return (
     <>
       <Swiper
