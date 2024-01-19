@@ -1,10 +1,13 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { FaStar } from "react-icons/fa6";
+import { FaRegHeart, FaStar } from "react-icons/fa6";
 import DynamicImage from "../LazyLoadImage/DynamicImage";
 import ProductMiniCarousel from "../Carousels/SpecialProductsCarousel/ProductMiniCarousel";
 import ProductTimeCounter from "../TimeCounter/ProductTimeCounter";
+import { TbShoppingBag } from "react-icons/tb";
+import { BiShowAlt } from "react-icons/bi";
+import { PiShuffle } from "react-icons/pi";
 
 const SpecialProductCard = ({ item }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -12,7 +15,7 @@ const SpecialProductCard = ({ item }) => {
   return (
     <div className="bg-white p-5 rounded-xl relative group">
       <div className="flex gap-3">
-        <div className="w-1/2 flex flex-col gap-3">
+        <div className="w-1/2 flex flex-col gap-3 relative">
           <div>
             <DynamicImage
               src={selectedImage ? selectedImage.url : item.images[0].url}
@@ -20,6 +23,52 @@ const SpecialProductCard = ({ item }) => {
               dimension={{ height: 884, width: 884 }}
               className="h-full w-full object-cover"
             />
+          </div>
+          {/* card icons */}
+          <div>
+            <div className="absolute top-2 right-2">
+              <button
+                onClick={() => {
+                  console.log("clicked add to wishlist");
+                }}
+                className="bg-white hover:bg-secondary text-secondary hover:text-white rounded-full p-2 
+              transition-all duration-150 ease-linear"
+              >
+                <FaRegHeart className="h-4 w-4 sm:h-5 sm:w-5" />
+              </button>
+            </div>
+            <div
+              className="flex flex-col gap-0 sm:gap-2 absolute top-10 sm:top-14 right-2 opacity-100 sm:opacity-0 group-hover:opacity-100 
+          transition-all ease-linear duration-300"
+            >
+              <button
+                onClick={() => {
+                  console.log("clicked add to compare");
+                }}
+                className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
+              transition-all duration-150 ease-linear"
+              >
+                <PiShuffle className="h-4 w-4 sm:h-5 sm:w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  console.log("clicked show quick view");
+                }}
+                className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
+              transition-all duration-150 ease-linear"
+              >
+                <BiShowAlt className="h-4 w-4 sm:h-5 sm:w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  console.log("clicked add to cart");
+                }}
+                className="bg-white hover:bg-primary text-dark-muted hover:text-white rounded-full p-2 
+              transition-all duration-150 ease-linear"
+              >
+                <TbShoppingBag className="h-4 w-4 sm:h-5 sm:w-5" />
+              </button>
+            </div>
           </div>
           <div>
             {item.images.length > 1 ? (
