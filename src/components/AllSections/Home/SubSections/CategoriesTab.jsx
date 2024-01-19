@@ -3,7 +3,7 @@ import DynamicImage from "../../../Shared/LazyLoadImage/DynamicImage";
 
 const CategoriesTab = () => {
   return (
-    <div className="h-full py-3 bg-white rounded-xl">
+    <div className="h-[410px] shadow-md py-3 bg-white rounded-xl">
       {homeCategoriesTabData.map((item) => (
         <div key={item.id} className="flex flex-col">
           <button
