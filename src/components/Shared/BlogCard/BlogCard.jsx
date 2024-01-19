@@ -20,7 +20,7 @@ const BlogCard = ({ item }) => {
           height: 284,
         }}
       />
-      <div className="flex flex-col gap-2 p-5">
+      <div className="flex flex-col gap-3 p-5">
         <span className="text-secondary text-sm">
           {moment(item.createdAt).format("MMM DD, YYYY")}
         </span>
@@ -33,7 +33,8 @@ const BlogCard = ({ item }) => {
         <div className="mt-3">
           <Link
             to={"/"}
-            className="bg-dark group-hover:bg-tertiary text-white px-5 py-1.5 inline-block rounded-full transition-all duration-200 ease-linear"
+            className="bg-dark group-hover:bg-tertiary text-white px-5 py-1.5 uppercase text-sm font-poppins font-semibold 
+            inline-block rounded-full transition-all duration-200 ease-linear"
           >
             Read more
           </Link>
