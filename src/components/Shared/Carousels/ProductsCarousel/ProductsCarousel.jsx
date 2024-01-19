@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../Carousel.css";
 import ProductCard from "../../ProductCard/ProductCard";
 
-const ProductsCarousel = ({ swiperRef, data }) => {
+const ProductsCarousel = ({ swiperRef, slidesPerView, data }) => {
+  console.log(slidesPerView);
   return (
     <>
       <Swiper
@@ -13,13 +14,13 @@ const ProductsCarousel = ({ swiperRef, data }) => {
         spaceBetween={20}
         breakpoints={{
           320: {
-            slidesPerView: 2,
+            slidesPerView: slidesPerView["sm"],
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: slidesPerView["md"],
           },
           1024: {
-            slidesPerView: 6,
+            slidesPerView: slidesPerView["lg"],
           },
         }}
         className="mySwiper"
@@ -36,6 +37,7 @@ const ProductsCarousel = ({ swiperRef, data }) => {
 
 ProductsCarousel.propTypes = {
   swiperRef: PropTypes.object,
+  slidesPerView: PropTypes.object,
   data: PropTypes.array,
 };
 

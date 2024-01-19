@@ -38,7 +38,15 @@ const FeaturedSec = () => {
         />
       </div>
       <div>
-        <ProductsCarousel swiperRef={swiperRef} data={productsData} />
+        <ProductsCarousel
+          swiperRef={swiperRef}
+          slidesPerView={{
+            sm: 2,
+            md: 3,
+            lg: 6,
+          }}
+          data={productsData}
+        />
       </div>
     </div>
   );
