@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import smoothScrollToTop from "../SmoothScroll/SmoothScroll";
 
 const CartDrawer = ({ closeDrawerRight }) => {
   return (
@@ -18,6 +19,7 @@ const CartDrawer = ({ closeDrawerRight }) => {
           </div>
           <div>
             <Link
+              onClick={smoothScrollToTop}
               to={"/shop"}
               className="hover:text-primary underline transition-all ease-linear duration-150"
             >

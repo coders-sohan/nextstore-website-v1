@@ -6,11 +6,12 @@ import { Autoplay, Pagination } from "swiper/modules";
 // import css
 import "../Carousel.css";
 import { bannerSliderData } from "../../../../assets/data/homeSecData";
+import smoothScrollToTop from "../../SmoothScroll/SmoothScroll";
 
 const BannerCarousel = () => {
   const pagination = {
     clickable: true,
-    renderBullet: function (index, className) {
+    renderBullet: function (className) {
       return `<span class="${className} w-3 h-3 mx-1 rounded-full"></span>`;
     },
   };
@@ -49,6 +50,7 @@ const BannerCarousel = () => {
                 ></p>
                 <div className="mt-3 sm:mt-5">
                   <Link
+                    onClick={smoothScrollToTop}
                     to={item.btnUrl}
                     className="uppercase bg-dark-muted text-white px-4 sm:px-8 py-2 sm:py-3 text-xs font-medium rounded-full hover:bg-primary transition-all ease-linear duration-150"
                   >

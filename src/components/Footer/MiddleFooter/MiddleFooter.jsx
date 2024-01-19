@@ -6,6 +6,7 @@ import {
   quickLinksData,
 } from "../../../assets/data/footerData";
 import { socialData } from "../../../assets/data/socialData";
+import smoothScrollToTop from "../../Shared/SmoothScroll/SmoothScroll";
 import app_icon_01 from "../../../assets/images/app-icon-01.png";
 import app_icon_02 from "../../../assets/images/app-icon-02.png";
 
@@ -55,6 +56,7 @@ const MiddleFooter = () => {
             <div className="flex flex-col gap-2 sm:gap-5">
               {informationData.map((item) => (
                 <Link
+                  onClick={smoothScrollToTop}
                   key={item.id}
                   path={item.href}
                   className="text-sm font-medium hover:text-tertiary transition-all ease-linear duration-200"
@@ -71,6 +73,7 @@ const MiddleFooter = () => {
             <div className="flex flex-col gap-2 sm:gap-5">
               {accountData.map((item) => (
                 <Link
+                  onClick={smoothScrollToTop}
                   key={item.id}
                   to={item.href}
                   className="text-sm font-medium hover:text-tertiary transition-all ease-linear duration-200"
@@ -87,6 +90,7 @@ const MiddleFooter = () => {
             <div className="flex flex-col gap-2 sm:gap-5">
               {quickLinksData.map((item) => (
                 <Link
+                  onClick={smoothScrollToTop}
                   key={item.id}
                   to={item.href}
                   className="text-sm font-medium hover:text-tertiary transition-all ease-linear duration-200"

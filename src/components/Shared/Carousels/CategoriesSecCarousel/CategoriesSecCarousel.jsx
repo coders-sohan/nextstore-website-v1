@@ -8,6 +8,7 @@ import { Autoplay } from "swiper/modules";
 // import css
 import "../Carousel.css";
 import { homeCategoriesData } from "../../../../assets/data/homeSecData";
+import smoothScrollToTop from "../../SmoothScroll/SmoothScroll";
 import DynamicImage from "../../LazyLoadImage/DynamicImage";
 
 const CategoriesSecCarousel = () => {
@@ -43,7 +44,12 @@ const CategoriesSecCarousel = () => {
           <SwiperSlide key={index}>
             <div className="flex flex-col">
               {chunk.map((item, index) => (
-                <Link key={item.id} to={"/"} className="group">
+                <Link
+                  onClick={smoothScrollToTop}
+                  key={item.id}
+                  to={"/"}
+                  className="group"
+                >
                   <div
                     className={`flex items-center justify-between border-l border-r p-5 ${
                       index === 0 ? "border-t border-b" : ""

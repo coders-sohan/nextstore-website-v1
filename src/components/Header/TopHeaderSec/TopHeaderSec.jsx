@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import CustomSelect from "./CustomSelect";
+import { NavLink } from "react-router-dom";
 import {
   accountRelatedData,
   informationRelatedData,
 } from "../../../assets/data/navbarData";
+import smoothScrollToTop from "../../Shared/SmoothScroll/SmoothScroll";
+import CustomSelect from "./CustomSelect";
 
 const TopHeaderSec = () => {
   const [selected, setSelected] = useState({});
@@ -20,16 +21,24 @@ const TopHeaderSec = () => {
         <div className="md:flex items-center gap-5 -mt-0.5 hidden">
           {accountRelatedData.map((item) => (
             <div key={item.id}>
-              <Link to={item.href} className="text-xs">
+              <NavLink
+                onClick={smoothScrollToTop}
+                to={item.href}
+                className="text-xs"
+              >
                 {item.name}
-              </Link>
+              </NavLink>
             </div>
           ))}
         </div>
         <div className="flex items-center gap-5 -mt-0.5">
-          <Link to={"/order-tracking"} className="text-xs">
+          <NavLink
+            onClick={smoothScrollToTop}
+            to={"/order-tracking"}
+            className="text-xs"
+          >
             Order Tracking
-          </Link>
+          </NavLink>
           {informationRelatedData.map((item) => (
             <div key={item.id}>
               <CustomSelect

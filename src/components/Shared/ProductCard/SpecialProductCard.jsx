@@ -2,12 +2,13 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FaRegHeart, FaStar } from "react-icons/fa6";
+import { BiShowAlt } from "react-icons/bi";
+import { PiShuffle } from "react-icons/pi";
+import { TbShoppingBag } from "react-icons/tb";
+import smoothScrollToTop from "../SmoothScroll/SmoothScroll";
 import DynamicImage from "../LazyLoadImage/DynamicImage";
 import ProductMiniCarousel from "../Carousels/SpecialProductsCarousel/ProductMiniCarousel";
 import ProductTimeCounter from "../TimeCounter/ProductTimeCounter";
-import { TbShoppingBag } from "react-icons/tb";
-import { BiShowAlt } from "react-icons/bi";
-import { PiShuffle } from "react-icons/pi";
 
 const SpecialProductCard = ({ item }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -82,12 +83,17 @@ const SpecialProductCard = ({ item }) => {
         <div className="w-1/2 px-1">
           <div className="flex flex-col gap-2">
             <div>
-              <Link to={`/`} className="text-xs sm:text-sm text-secondary">
+              <Link
+                onClick={smoothScrollToTop}
+                to={`/`}
+                className="text-xs sm:text-sm text-secondary"
+              >
                 {item.category}
               </Link>
             </div>
             <div>
               <Link
+                onClick={smoothScrollToTop}
                 to={`/`}
                 className="text-sm sm:text-base font-semibold font-poppins hover:underline underline-offset-1"
                 title={item.title}
@@ -116,6 +122,7 @@ const SpecialProductCard = ({ item }) => {
             </div>
             <div className="mt-3 text-center sm:text-left">
               <Link
+                onClick={smoothScrollToTop}
                 to={"/"}
                 className="text-xs sm:text-sm font-semibold px-3 sm:px-5 py-1 sm:py-1.5 bg-primary text-white rounded-full inline-block transition-all duration-150 ease-linear group-hover:bg-dark"
               >

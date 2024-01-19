@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu, MenuHandler, MenuList, Button } from "@material-tailwind/react";
 import { IoIosArrowDown } from "react-icons/io";
 import {
@@ -6,10 +6,10 @@ import {
   primaryMenuData,
 } from "../../../assets/data/navbarData";
 import menuSvg from "../../../assets/images/menu.svg";
+import smoothScrollToTop from "../../Shared/SmoothScroll/SmoothScroll";
 import CategoryItem from "./CategoryItem";
 
 const BottomHeaderSec = () => {
-
   return (
     <div className="ns_container">
       <div className="flex items-center gap-5">
@@ -50,7 +50,9 @@ const BottomHeaderSec = () => {
           <div className="flex items-center gap-12">
             {primaryMenuData.map((item) => (
               <div key={item.id}>
-                <Link to={item.href}>{item.name}</Link>
+                <NavLink onClick={smoothScrollToTop} to={item.href}>
+                  {item.name}
+                </NavLink>
               </div>
             ))}
           </div>

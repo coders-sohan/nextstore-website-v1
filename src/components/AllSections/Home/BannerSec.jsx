@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import BannerCarousel from "../../Shared/Carousels/BannerCarousel/BannerCarousel";
 import { bannerCardSectionData } from "../../../assets/data/homeSecData";
+import smoothScrollToTop from "../../Shared/SmoothScroll/SmoothScroll";
+import BannerCarousel from "../../Shared/Carousels/BannerCarousel/BannerCarousel";
 
 const BannerSec = () => {
   return (
@@ -14,7 +15,7 @@ const BannerSec = () => {
         <div className="w-full sm:w-1/2">
           <div className="grid grid-cols-2 gap-5">
             {bannerCardSectionData.map((item) => (
-              <Link key={item.id} to={item.btnUrl}>
+              <Link onClick={smoothScrollToTop} key={item.id} to={item.btnUrl}>
                 <div className="relative h-36 w-auto sm:h-56 sm:w-full overflow-hidden rounded-xl group">
                   <div
                     style={{ backgroundImage: `url('${item.imgUrl}')` }}

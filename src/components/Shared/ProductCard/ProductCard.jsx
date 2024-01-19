@@ -5,6 +5,7 @@ import { FaStar, FaRegHeart } from "react-icons/fa6";
 import { PiShuffle } from "react-icons/pi";
 import { BiShowAlt } from "react-icons/bi";
 import { TbShoppingBag } from "react-icons/tb";
+import smoothScrollToTop from "../SmoothScroll/SmoothScroll";
 import DynamicImage from "../LazyLoadImage/DynamicImage";
 
 const ProductCard = ({ item }) => {
@@ -28,7 +29,7 @@ const ProductCard = ({ item }) => {
     >
       <div className="flex flex-col relative">
         {/* card images */}
-        <Link to={"/"}>
+        <Link onClick={smoothScrollToTop} to={"/"}>
           <DynamicImage
             src={currentImage}
             alt={item.title}
@@ -86,6 +87,7 @@ const ProductCard = ({ item }) => {
         <div className="flex flex-col gap-4 px-4 py-3">
           <p className="text-sm text-secondary">{item.category}</p>
           <Link
+            onClick={smoothScrollToTop}
             to={"/"}
             className="font-semibold text-dark-special text-sm font-poppins hover:underline underline-offset-2 sm:text-base"
             title={item.title}

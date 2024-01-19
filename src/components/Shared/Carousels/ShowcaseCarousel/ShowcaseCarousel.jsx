@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 // import css
 import "../Carousel.css";
+import smoothScrollToTop from "../../SmoothScroll/SmoothScroll";
 
 const ShowcaseCarousel = ({ data }) => {
   return (
@@ -35,7 +36,7 @@ const ShowcaseCarousel = ({ data }) => {
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
-            <Link key={item.id} to={item.btnUrl}>
+            <Link onClick={smoothScrollToTop} key={item.id} to={item.btnUrl}>
               <div className="relative h-[420px] w-full overflow-hidden rounded-xl group">
                 <div
                   style={{ backgroundImage: `url('${item.imgUrl}')` }}

@@ -10,9 +10,10 @@ import {
 } from "@material-tailwind/react";
 import { FiSearch } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { iconMenuData } from "../../../assets/data/navbarData";
+import smoothScrollToTop from "../../Shared/SmoothScroll/SmoothScroll";
 import ItemContent from "../../Shared/ItemContent/ItemContent";
 import CartDrawer from "../../Shared/CartDrawer/CartDrawer";
-import { iconMenuData } from "../../../assets/data/navbarData";
 
 const MiddelHeaderSec = () => {
   const [openRight, setOpenRight] = useState(false);
@@ -29,7 +30,11 @@ const MiddelHeaderSec = () => {
       <div className="flex justify-between items-center">
         {/* logo */}
         <div className="w-auto -mt-0.5">
-          <Link to={"/"} className="text-3xl font-extrabold tracking-wider">
+          <Link
+            onClick={smoothScrollToTop}
+            to={"/"}
+            className="text-3xl font-extrabold tracking-wider"
+          >
             <span>Nextshop</span>
             <span className="text-warning">.</span>
           </Link>
@@ -54,7 +59,11 @@ const MiddelHeaderSec = () => {
           {iconMenuData.map((item) => (
             <div key={item.id}>
               {item.href && (
-                <Link to={item.href} className="flex items-center gap-3">
+                <Link
+                  onClick={smoothScrollToTop}
+                  to={item.href}
+                  className="flex items-center gap-3"
+                >
                   <ItemContent icon={item.icon} name={item.name} />
                 </Link>
               )}

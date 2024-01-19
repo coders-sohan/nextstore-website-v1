@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import moment from "moment";
+import smoothScrollToTop from "../SmoothScroll/SmoothScroll";
 import DynamicImage from "../LazyLoadImage/DynamicImage";
 
 const BlogCard = ({ item }) => {
   return (
     <Link
+      onClick={smoothScrollToTop}
       to={"/"}
       className="flex flex-col bg-white overflow-hidden rounded-xl group shadow-md my-2"
     >
@@ -32,6 +34,7 @@ const BlogCard = ({ item }) => {
         </p>
         <div className="mt-3">
           <Link
+            onClick={smoothScrollToTop}
             to={"/"}
             className="bg-dark group-hover:bg-tertiary text-white px-5 py-1.5 uppercase text-sm font-poppins font-semibold 
             inline-block rounded-full transition-all duration-200 ease-linear"

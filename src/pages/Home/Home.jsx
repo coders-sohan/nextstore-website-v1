@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BannerSec from "../../components/AllSections/Home/BannerSec";
 import ServiceTypeSec from "../../components/AllSections/Home/ServiceTypeSec";
 import CategoriesSec from "../../components/AllSections/Home/CategoriesSec";
@@ -9,6 +10,13 @@ import BrandsSec from "../../components/AllSections/Home/BrandsSec";
 import BlogsSec from "../../components/AllSections/Home/BlogsSec";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div>
       <div className="ns_container py-8 sm:py-12">
