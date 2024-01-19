@@ -8,6 +8,6 @@ export const baseApi = createApi({
       "Content-Type": "application/json",
     },
   }),
-  tagTypes: ["AllBlogs"],
+  tagTypes: ["AllBlogs", "AllProducts"],
   endpoints: () => ({}),
 });

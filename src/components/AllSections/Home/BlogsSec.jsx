@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { blogsData } from "../../../assets/data/blogsData";
 import CarouselController from "../../Shared/Carousels/CarouselController";
 import BlogCarousel from "../../Shared/Carousels/BlogCarousel/BlogCarousel";
+// redux toolkit
 import { useGetAllBlogsQuery } from "../../../redux/services/blogs/blogsService";
 
 const BlogsSec = () => {
