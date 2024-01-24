@@ -1,6 +1,7 @@
 import TopHeaderSec from "./TopHeaderSec/TopHeaderSec";
 import MiddelHeaderSec from "./MiddelHeaderSec/MiddelHeaderSec";
-import BottomHeaderSec from "./BottomHeaderSec/BottomHeaderSec";
+// import BottomHeaderSec from "./BottomHeaderSec/BottomHeaderSec";
+import BottomNavSec from "./BottomNavSec/BottomNavSec";
 
 const Header = () => {
   return (
@@ -13,7 +14,8 @@ const Header = () => {
           <MiddelHeaderSec />
         </div>
         <div className="bg-dark-special text-white py-3 md:block hidden">
-          <BottomHeaderSec />
+          {/* <BottomHeaderSec /> */}
+          <BottomNavSec />
         </div>
       </div>
     </>
