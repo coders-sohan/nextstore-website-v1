@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, MenuHandler, MenuList, Button } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import { IoIosArrowDown } from "react-icons/io";
 import {
     categoriesMenuData,
@@ -8,11 +8,9 @@ import {
 import menuSvg from "../../../assets/images/menu.svg";
 import smoothScrollToTop from "../../Shared/SmoothScroll/SmoothScroll";
 import CategoryItem from "./CategoryItem";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const BottomNavSec = () => {
     const [openMenu, setOpenMenu] = useState(false);
-    const [openSubMenu, setOpenSubMenu] = useState(false);
     return (
         <div className="ns_container">
             <div className="flex items-center gap-5">
@@ -36,25 +34,9 @@ const BottomNavSec = () => {
                                 </div>
                             </Button>
                         </div>
-                        {/* <div className="w-full rounded-b-lg absolute top-9 bg-gray-700 z-20">
-                            {categoriesMenuData.map((item) => (
-                                <div className="py-3 px-4" key={item.id}>{item.name}</div>
-                            ))}
-                        </div> */}
-                        <div className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 ${openMenu ? '' : 'hidden'}`}>
+                        <div className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 overflow-hidden hover:overflow-visible transition-all duration-700 ease-liniar ${openMenu ? ' max-h-screen' : 'max-h-0'}`}>
                             {categoriesMenuData.map((item, index) => (
                                 <CategoryItem key={item.id} item={item} index={index} categoriesMenuData={categoriesMenuData} />
-                                // <div
-                                //     className={`py-3 px-4 flex justify-between items-center ${index !== categoriesMenuData.length - 1 && 'border-b border-0.5 border-gray-700'}`}
-                                //     key={item.id}
-                                // >
-                                //     {item.name}
-                                //     <ChevronRightIcon
-                                //         strokeWidth={2.5}
-                                //         className={`h-3.5 w-3.5 transition-transform ${openSubMenu ? "rotate-180" : ""
-                                //             }`}
-                                //     />
-                                // </div>
                             ))}
                         </div>
                     </div>
