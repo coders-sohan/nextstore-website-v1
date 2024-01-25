@@ -27,7 +27,7 @@ const BottomNavSec = () => {
                                             Shop categories
                                         </span>
                                     </div>
-                                    <div className="mt-0.5">
+                                    <div className={`mt-0.5 transition-all duration-300 ease-in-out ${openMenu ? '-rotate-180' : 'rotate-0'}`}>
                                         <IoIosArrowDown />
                                     </div>
 
