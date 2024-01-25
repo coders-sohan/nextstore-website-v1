@@ -34,7 +34,7 @@ const BottomNavSec = () => {
                                 </div>
                             </Button>
                         </div>
-                        <div className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 overflow-hidden hover:overflow-visible transition-all duration-700 ease-liniar ${openMenu ? ' max-h-screen' : 'max-h-0'}`}>
+                        <div className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 overflow-hidden hover:overflow-visible transition-all duration-700 ease-linear ${openMenu ? ' max-h-screen' : 'max-h-0'}`}>
                             {categoriesMenuData.map((item, index) => (
                                 <CategoryItem key={item.id} item={item} index={index} categoriesMenuData={categoriesMenuData} />
                             ))}
