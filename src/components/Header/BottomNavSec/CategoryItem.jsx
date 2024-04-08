@@ -39,6 +39,7 @@ const CategoryItem = ({ item, index, categoriesMenuData }) => {
               }`}
           />}
         <SubItem openSubMenu={openSubMenu} item={item} />
+
       </div>
   );
 };
