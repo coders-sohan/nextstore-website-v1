@@ -164,7 +164,23 @@ export const categoriesMenuData = [
       {
         id: "mobile",
         name: "Mobile",
-        href: "/mobile",
+        subData: [
+          {
+            id: "samsung",
+            name: "Samsung",
+            href: "/samsung",
+          },
+          {
+            id: "apple",
+            name: "Apple",
+            href: "/apple",
+          },
+          {
+            id: "huawei",
+            name: "Huawei",
+            href: "/huawei",
+          },
+        ],
       },
       {
         id: "camera",
