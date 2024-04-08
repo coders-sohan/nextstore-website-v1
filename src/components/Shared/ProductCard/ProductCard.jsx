@@ -29,7 +29,10 @@ const ProductCard = ({ item }) => {
     >
       <div className="flex flex-col relative">
         {/* card images */}
-        <Link onClick={smoothScrollToTop} to={"/"}>
+        <Link
+          onClick={smoothScrollToTop}
+          to={"/product-details/" + `${item._id}`}
+        >
           <DynamicImage
             src={currentImage}
             alt={item.title}
@@ -88,7 +91,7 @@ const ProductCard = ({ item }) => {
           <p className="text-sm text-secondary">{item.category}</p>
           <Link
             onClick={smoothScrollToTop}
-            to={"/"}
+            to={"/product-details/" + `${item._id}`}
             className="font-semibold text-dark-special text-sm font-poppins hover:underline underline-offset-2 sm:text-base"
             title={item.title}
           >
