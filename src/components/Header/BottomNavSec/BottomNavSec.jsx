@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  // Menu,
-  // MenuHandler,
-  // MenuList,
-  Button,
-} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 import { IoIosArrowDown } from "react-icons/io";
 import {
   categoriesMenuData,
@@ -47,8 +42,8 @@ const BottomNavSec = () => {
               </Button>
             </div>
             <div
-              className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 overflow-hidden hover:overflow-visible transition-all duration-700 ease-linear ${
-                openMenu ? " max-h-screen" : "max-h-0"
+              className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 ${
+                openMenu ? "" : "hidden"
               }`}
             >
               {categoriesMenuData.map((item, index) => (
@@ -62,20 +57,7 @@ const BottomNavSec = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`w-full rounded-b-lg absolute top-9 bg-dark-special z-20 ${
-            openMenu ? "" : "hidden"
-          }`}
-        >
-          {categoriesMenuData.map((item, index) => (
-            <CategoryItem
-              key={item.id}
-              item={item}
-              index={index}
-              categoriesMenuData={categoriesMenuData}
-            />
-          ))}
-        </div>
+
         <div>
           <div className="flex items-center gap-12">
             {primaryMenuData.map((item) => (
