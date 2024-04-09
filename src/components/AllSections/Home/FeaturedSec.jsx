@@ -10,8 +10,8 @@ const FeaturedSec = () => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
-  const { data: productsData, error, isLoading } = useGetAllProductsQuery();
-  console.log(productsData, error, isLoading);
+  const { data: productsData, isLoading } = useGetAllProductsQuery();
+  console.log(isLoading);
 
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {

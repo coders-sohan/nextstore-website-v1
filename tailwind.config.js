@@ -38,6 +38,7 @@ export default withMT({
         openSans: ["Open Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        proxima: ["Proxima Nova", "sans-serif"],
       },
     },
   },

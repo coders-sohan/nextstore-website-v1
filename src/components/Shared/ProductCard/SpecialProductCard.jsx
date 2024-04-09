@@ -17,14 +17,14 @@ const SpecialProductCard = ({ item }) => {
     <div className="bg-white p-5 rounded-xl relative group">
       <div className="flex gap-3">
         <div className="w-1/2 flex flex-col gap-3 relative">
-          <div>
+          <Link onClick={smoothScrollToTop} to={"/product/" + `${item.slug}`}>
             <DynamicImage
               src={selectedImage ? selectedImage.url : item.images[0].url}
               alt={item.title}
               dimension={{ height: 884, width: 884 }}
               className="h-full w-full object-cover"
             />
-          </div>
+          </Link>
           {/* card icons */}
           <div>
             <div className="absolute top-0 right-2">
@@ -94,7 +94,7 @@ const SpecialProductCard = ({ item }) => {
             <div>
               <Link
                 onClick={smoothScrollToTop}
-                to={`/`}
+                to={"/product/" + `${item.slug}`}
                 className="text-sm sm:text-base font-semibold font-poppins hover:underline underline-offset-1"
                 title={item.title}
               >

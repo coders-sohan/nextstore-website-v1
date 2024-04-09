@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import BannerSec from "../../components/AllSections/Home/BannerSec";
 import ServiceTypeSec from "../../components/AllSections/Home/ServiceTypeSec";
 import CategoriesSec from "../../components/AllSections/Home/CategoriesSec";
@@ -18,21 +19,32 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <div className="ns_container py-8 sm:py-12">
-        <BannerSec />
+    <>
+      <Helmet>
+        <title>Next Store - The Best eCommerce Website</title>
+        {/* meta infos */}
+        <meta
+          name="description"
+          content="Next Store - The Best eCommerce Website"
+        />
+      </Helmet>
+
+      <div>
+        <div className="ns_container py-8 sm:py-12">
+          <BannerSec />
+        </div>
+        <div className="ns_container py-3 sm:py-5 bg-gray-special">
+          <ServiceTypeSec />
+          <CategoriesSec />
+          <FeaturedSec />
+          <ShowcaseSec />
+          <SpecialProductsSec />
+          <PopularProductsSec />
+          <BrandsSec />
+          <BlogsSec />
+        </div>
       </div>
-      <div className="ns_container py-3 sm:py-5 bg-gray-special">
-        <ServiceTypeSec />
-        <CategoriesSec />
-        <FeaturedSec />
-        <ShowcaseSec />
-        <SpecialProductsSec />
-        <PopularProductsSec />
-        <BrandsSec />
-        <BlogsSec />
-      </div>
-    </div>
+    </>
   );
 };
 

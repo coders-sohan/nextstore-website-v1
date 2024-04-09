@@ -10,9 +10,16 @@ const productsApiService = baseApi.injectEndpoints({
       query: (id) => `/product/get-product-by-id/${id}`,
       providesTags: ["Product"],
     }),
+    getProductBySlug: builder.query({
+      query: (slug) => `/product/get-product-by-slug/${slug}`,
+      providesTags: ["Product"],
+    }),
   }),
   overrideExisting: false,
 });
 
-export const { useGetAllProductsQuery, useGetProductByIdQuery } =
-  productsApiService;
+export const {
+  useGetAllProductsQuery,
+  useGetProductByIdQuery,
+  useGetProductBySlugQuery,
+} = productsApiService;
