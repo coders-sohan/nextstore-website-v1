@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import ReactImageZoom from "react-image-zoom";
+import { BiSearchAlt } from "react-icons/bi";
 
 const ScrollableProductImages = ({ images }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -12,27 +13,28 @@ const ScrollableProductImages = ({ images }) => {
   };
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="flex justify-center py-10 border relative">
+    <div className="flex flex-col items-center gap-5">
+      <div className="flex justify-center border w-full h-full relative">
         <ReactImageZoom
           {...{
             img: images[0]?.url,
             width: 500,
+            zoomWidth: 600,
             zoomPosition: "original",
           }}
         />
         <div
-          className="absolute top-5 left-5 bg-red-400"
+          className="absolute top-5 left-5 cursor-pointer"
           onClick={() => handleZoomClick(images[0]?.url)}
         >
-          <p>zoom icon</p>
+          <BiSearchAlt className="h-8 w-8" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-5">
         {images.map((image, index) => {
           if (index === 0) return null;
           return (
-            <div key={index} className="flex justify-center border relative">
+            <div key={index} className="border relative">
               <ReactImageZoom
                 {...{
                   img: image.url,
@@ -41,10 +43,10 @@ const ScrollableProductImages = ({ images }) => {
                 }}
               />
               <div
-                className="absolute top-5 left-5 bg-red-400"
+                className="absolute top-5 left-5"
                 onClick={() => handleZoomClick(image.url)}
               >
-                <p>zoom icon</p>
+                <BiSearchAlt className="h-6 w-6" />
               </div>
             </div>
           );
