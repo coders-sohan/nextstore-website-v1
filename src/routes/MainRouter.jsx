@@ -5,6 +5,8 @@ import MainLayouts from "../layouts/MainLayouts";
 import Home from "../pages/Home/Home";
 import Shop from "../pages/Shop/Shop";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
+import ErrorPage from "../pages/Errors/All/ErrorPage";
+import ProductError from "../pages/Errors/Product/ProductError";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +27,12 @@ export const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <div>404 error</div>,
+        element: <ErrorPage />,
+      },
+      // product error page
+      {
+        path: "/product-error",
+        element: <ProductError />,
       },
     ],
   },

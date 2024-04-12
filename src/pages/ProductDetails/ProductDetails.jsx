@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { useGetProductBySlugQuery } from "../../redux/services/products/productsService";
 import ScrollableProductImages from "../../components/AllSections/ProductDetails/ScrollableProductImages/ScrollableProductImages";
@@ -8,6 +8,7 @@ import FeaturedSec from "../../components/AllSections/Home/FeaturedSec";
 
 const ProductDetails = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
 
   // state for scrolling
   const [isScrollingLeft, setIsScrollingLeft] = useState(false);
@@ -20,6 +21,11 @@ const ProductDetails = () => {
   // get single product by id
   const { data: productData, isLoading } = useGetProductBySlugQuery(slug);
   const product = productData?.data;
+
+  //  if data is undefined or null then navigate to ProductError page via redirect  to="/product-error"
+  if (!isLoading && !product) {
+    navigate("/product-error");
+  }
 
   return (
     <div className="bg-gray-special pt-6">
