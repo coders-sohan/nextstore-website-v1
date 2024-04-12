@@ -22,7 +22,7 @@ const ProductDetails = () => {
   const product = productData?.data;
 
   return (
-    <>
+    <div className="bg-gray-special pt-6">
       {isLoading ? (
         <Helmet>
           <title>Loading...</title>
@@ -46,7 +46,7 @@ const ProductDetails = () => {
         <div>Loading...</div>
       ) : (
         <div className="ns_container">
-          <div className="flex flex-row pt-10 gap-14">
+          <div className="flex flex-col lg:flex-row p-5 gap-10 bg-white rounded-md shadow-md">
             <div
               ref={leftSectionRef}
               className={`w-full h-full overflow-y-scroll md:w-1/2 transition-all duration-300 ease-in-out ${
@@ -54,24 +54,24 @@ const ProductDetails = () => {
               }`}
               onScroll={handleLeftSectionScroll}
             >
-              <ScrollableProductImages images={product.images} />
+              <ScrollableProductImages
+                images={product?.images}
+                title={product?.title}
+              />
             </div>
             <div
-              className={`w-full h-full sticky top-10 right-0 p-5 md:w-1/2 bg-white border shadow-md transition-all duration-300 
+              className={`w-full h-full sticky top-10 right-0 md:w-1/2 bg-white transition-all duration-300 
               ease-in-out ${window.innerWidth >= 768 ? "fixed" : ""}`}
             >
               <StickyProductInfo product={product} />
             </div>
           </div>
           <div className="py-10">
-            <h2 className="text-2xl font-bold text-center mt-8 mb-4">
-              Featured Products
-            </h2>
             <FeaturedSec />
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
