@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { FiHeart, FiRefreshCw } from "react-icons/fi";
+import FAQs from "./FAQs/FAQs";
 
 const SellsFunc = ({ product, quantityValue, setQuantityValue }) => {
   // max quantity
@@ -143,6 +144,8 @@ const SellsFunc = ({ product, quantityValue, setQuantityValue }) => {
           </button>
         </div>
       </div>
+      {/* FAQ's */}
+      <FAQs />
     </div>
   );
 };
