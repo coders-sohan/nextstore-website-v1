@@ -10,7 +10,6 @@ const StickyProductInfo = ({ product }) => {
   const [selectedSize, setselectedSize] = useState(product?.sizes[0]?.size);
   // Sells Functionality
   const [quantityValue, setQuantityValue] = useState(1);
-  const [maxQuantity, setMaxQuantity] = useState(product?.quantity);
 
   // cart info
   const cartInfo = {
@@ -18,7 +17,6 @@ const StickyProductInfo = ({ product }) => {
     selectedColor,
     selectedSize,
     quantityValue,
-    quantity: maxQuantity,
   };
 
   console.log(cartInfo);
@@ -28,8 +26,7 @@ const StickyProductInfo = ({ product }) => {
     console.log(selectedColor);
     console.log(selectedSize);
     console.log(quantityValue);
-    console.log(maxQuantity);
-  }, [selectedColor, selectedSize, quantityValue, maxQuantity]);
+  }, [selectedColor, selectedSize, quantityValue]);
 
   return (
     <div className="flex flex-col gap-3 pb-5">
@@ -48,8 +45,6 @@ const StickyProductInfo = ({ product }) => {
         product={product}
         quantityValue={quantityValue}
         setQuantityValue={setQuantityValue}
-        maxQuantity={maxQuantity}
-        setMaxQuantity={setMaxQuantity}
       />
     </div>
   );
