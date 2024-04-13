@@ -10,7 +10,7 @@ const StickyProductInfo = ({ product }) => {
   const [selectedSize, setselectedSize] = useState(product?.sizes[0]?.size);
   // Sells Functionality
   const [quantityValue, setQuantityValue] = useState(1);
-  const [maxQuantity] = useState(product?.quantity);
+  const [maxQuantity, setMaxQuantity] = useState(product?.quantity);
 
   // cart info
   const cartInfo = {
@@ -18,7 +18,7 @@ const StickyProductInfo = ({ product }) => {
     selectedColor,
     selectedSize,
     quantityValue,
-    quanntity: maxQuantity,
+    quantity: maxQuantity,
   };
 
   console.log(cartInfo);
@@ -49,6 +49,7 @@ const StickyProductInfo = ({ product }) => {
         quantityValue={quantityValue}
         setQuantityValue={setQuantityValue}
         maxQuantity={maxQuantity}
+        setMaxQuantity={setMaxQuantity}
       />
     </div>
   );
