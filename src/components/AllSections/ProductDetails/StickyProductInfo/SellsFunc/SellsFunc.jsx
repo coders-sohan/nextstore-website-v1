@@ -144,6 +144,8 @@ const SellsFunc = ({ product, quantityValue, setQuantityValue }) => {
           </button>
         </div>
       </div>
+      {/* shipping and other policies */}
+      {/* share and payment options */}
       {/* FAQ's */}
       <FAQs />
     </div>
